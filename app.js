@@ -1,0 +1,1 @@
+const btn = document.getElementById("gcla");btn.addEventListener("mouseover", () => {    btn.textContent = "Grand Chronicle of Late Antiquity";});btn.addEventListener("mouseout", () => {    btn.textContent = "GCLA";});
