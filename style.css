@@ -102,13 +102,3 @@ body {
   font-style: italic;
   opacity: 0.75;
 }
-.leaf-content {
-  text-align: left;
-  font-size: 1.15rem;
-  line-height: 1.6;
-  max-width: 70ch;
-  margin: 2rem auto;
-  padding: 1.5rem;
-  color: #222;
-  font-family: Georgia, "Times New Roman", serif;
-}
