@@ -26,7 +26,7 @@ const tree = {
   ]
 };
 
-let currentNode = tree;
+let currentNode = null;
 let historyStack = [];
 
 function makeButton(node, onClick) {
@@ -47,19 +47,28 @@ function makeButton(node, onClick) {
   return button;
 }
 
-function renderNode(node) {
+function renderRoot() {
   app.innerHTML = "";
 
   const container = document.createElement("div");
   container.className = "button-container";
 
-  let buttonsToShow;
+  const button = makeButton(tree, () => {
+    currentNode = tree;
+    renderNode(tree);
+  });
 
-  if (node === tree) {
-    buttonsToShow = [tree];
-  } else if (node.children && node.children.length > 0) {
-    buttonsToShow = node.children;
-  } else {
+  button.classList.add("single-button");
+  container.appendChild(button);
+  app.appendChild(container);
+
+  backButton.hidden = true;
+}
+
+function renderNode(node) {
+  app.innerHTML = "";
+
+  if (!node.children || node.children.length === 0) {
     const leaf = document.createElement("div");
     leaf.style.textAlign = "center";
     leaf.style.fontSize = "28px";
@@ -67,18 +76,21 @@ function renderNode(node) {
     leaf.textContent = node.hover || node.label;
     app.appendChild(leaf);
 
-    backButton.hidden = historyStack.length === 0;
+    backButton.hidden = false;
     return;
   }
 
-  buttonsToShow.forEach((child) => {
+  const container = document.createElement("div");
+  container.className = "button-container";
+
+  node.children.forEach((child) => {
     const button = makeButton(child, () => {
-      historyStack.push(currentNode);
+      historyStack.push(node);
       currentNode = child;
-      renderNode(currentNode);
+      renderNode(child);
     });
 
-    if (buttonsToShow.length === 1) {
+    if (node.children.length === 1) {
       button.classList.add("single-button");
     }
 
@@ -86,14 +98,25 @@ function renderNode(node) {
   });
 
   app.appendChild(container);
-  backButton.hidden = historyStack.length === 0;
+  backButton.hidden = false;
 }
 
 backButton.addEventListener("click", () => {
-  if (historyStack.length > 0) {
-    currentNode = historyStack.pop();
-    renderNode(currentNode);
+  if (historyStack.length === 0) {
+    currentNode = null;
+    renderRoot();
+    return;
+  }
+
+  const previousNode = historyStack.pop();
+
+  if (historyStack.length === 0) {
+    currentNode = previousNode;
+    renderNode(previousNode);
+  } else {
+    currentNode = previousNode;
+    renderNode(previousNode);
   }
 });
 
-renderNode(currentNode);
+renderRoot();
