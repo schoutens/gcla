@@ -68,18 +68,17 @@ function renderHome() {
   backButton.hidden = true;
 }
 
-function renderLeaf(node) {
-  currentView = "leaf";
+function renderChildren(node) {
+  currentView = "children";
   currentNode = node;
   app.innerHTML = "";
 
-  const leaf = document.createElement("div");
-  leaf.className = "leaf-content";
-  leaf.textContent = node.hover || node.label;
+  const children = node.children || [];
 
-  app.appendChild(leaf);
-  backButton.hidden = false;
-}
+  if (children.length === 0) {
+    renderLeaf(node);
+    return;
+  }
 
   const container = document.createElement("div");
   container.className = "button-container";
