@@ -1,1 +1,73 @@
-body {    margin: 0;    height: 100vh;    background: #111;    display: flex;    justify-content: center;    align-items: center;    font-family: Georgia, serif;}.big-button {    width: 340px;    height: 170px;    background: #222;    color: #aaa;    display: flex;    justify-content: center;    align-items: center;    font-size: 44px;    border: 2px solid #666;    cursor: pointer;    transition: all 0.4s ease;}.big-button:hover {    background: #eee;    color: #111;    font-size: 22px;}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #111;
+    color: #ddd;
+    font-family: Georgia, serif;
+}
+
+#nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+#back-button {
+    background: #222;
+    color: #bbb;
+    border: 1px solid #666;
+    padding: 10px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#back-button:hover {
+    background: #ddd;
+    color: #111;
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    width: min(1000px, 90vw);
+}
+
+.big-button {
+    min-height: 160px;
+    background: #222;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 42px;
+    border: 2px solid #666;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.big-button:hover {
+    background: #eee;
+    color: #111;
+    font-size: 22px;
+}
+
+.single-button {
+    width: 340px;
+    max-width: 80vw;
+    justify-self: center;
+}
