@@ -26,8 +26,9 @@ const tree = {
   ]
 };
 
-let currentNode = null;
 let historyStack = [];
+let currentView = "home";
+let currentNode = null;
 
 function makeButton(node, onClick) {
   const button = document.createElement("div");
@@ -47,50 +48,53 @@ function makeButton(node, onClick) {
   return button;
 }
 
-function renderRoot() {
+function renderHome() {
+  currentView = "home";
+  currentNode = null;
   app.innerHTML = "";
 
   const container = document.createElement("div");
   container.className = "button-container";
 
-  const button = makeButton(tree, () => {
-    currentNode = tree;
-    renderNode(tree);
+  const rootButton = makeButton(tree, () => {
+    historyStack.push({ view: "home", node: null });
+    renderChildren(tree);
   });
 
-  button.classList.add("single-button");
-  container.appendChild(button);
+  rootButton.classList.add("single-button");
+  container.appendChild(rootButton);
   app.appendChild(container);
 
   backButton.hidden = true;
 }
 
-function renderNode(node) {
+function renderChildren(node) {
+  currentView = "children";
+  currentNode = node;
   app.innerHTML = "";
 
-  if (!node.children || node.children.length === 0) {
-    const leaf = document.createElement("div");
-    leaf.style.textAlign = "center";
-    leaf.style.fontSize = "28px";
-    leaf.style.maxWidth = "800px";
-    leaf.textContent = node.hover || node.label;
-    app.appendChild(leaf);
+  const children = node.children || [];
 
-    backButton.hidden = false;
+  if (children.length === 0) {
+    renderLeaf(node);
     return;
   }
 
   const container = document.createElement("div");
   container.className = "button-container";
 
-  node.children.forEach((child) => {
+  children.forEach((child) => {
     const button = makeButton(child, () => {
-      historyStack.push(node);
-      currentNode = child;
-      renderNode(child);
+      historyStack.push({ view: "children", node: node });
+
+      if (child.children && child.children.length > 0) {
+        renderChildren(child);
+      } else {
+        renderLeaf(child);
+      }
     });
 
-    if (node.children.length === 1) {
+    if (children.length === 1) {
       button.classList.add("single-button");
     }
 
@@ -101,22 +105,35 @@ function renderNode(node) {
   backButton.hidden = false;
 }
 
+function renderLeaf(node) {
+  currentView = "leaf";
+  currentNode = node;
+  app.innerHTML = "";
+
+  const leaf = document.createElement("div");
+  leaf.style.textAlign = "center";
+  leaf.style.fontSize = "28px";
+  leaf.style.maxWidth = "800px";
+  leaf.style.padding = "20px";
+  leaf.textContent = node.hover || node.label;
+
+  app.appendChild(leaf);
+  backButton.hidden = false;
+}
+
 backButton.addEventListener("click", () => {
   if (historyStack.length === 0) {
-    currentNode = null;
-    renderRoot();
+    renderHome();
     return;
   }
 
-  const previousNode = historyStack.pop();
+  const previous = historyStack.pop();
 
-  if (historyStack.length === 0) {
-    currentNode = previousNode;
-    renderNode(previousNode);
-  } else {
-    currentNode = previousNode;
-    renderNode(previousNode);
+  if (previous.view === "home") {
+    renderHome();
+  } else if (previous.view === "children") {
+    renderChildren(previous.node);
   }
 });
 
-renderRoot();
+renderHome();
