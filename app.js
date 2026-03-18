@@ -1,99 +1,73 @@
-const tree = {
-    label: "GCLA",
-    hover: "Grand Chronicle of Late Antiquity",
-    children: [
-        {
-            label: "H2R",
-            hover: "Hero to Rebel",
-            children: []
-        },
-        {
-            label: "O2P",
-            hover: "Orphan to Princess",
-            children: []
-        },
-        {
-            label: "ELB",
-            hover: "Ex Libris Boranis",
-            children: []
-        }
-    ]
-};
-
 const app = document.getElementById("app");
 const backButton = document.getElementById("back-button");
 
-let currentNode = tree;
-let historyStack = [];
+const tree = {
+  label: "GCLA",
+  hover: "Grand Chronicle of Late Antiquity",
+  children: [
+    { label: "H2R", hover: "Hero to Rebel" },
+    { label: "O2P", hover: "Orphan to Princess" },
+    { label: "ELB", hover: "Ex Libris Boranis" }
+  ]
+};
 
-function renderNode(node) {
-    app.innerHTML = "";
+let showingRoot = true;
 
-    const container = document.createElement("div");
-    container.className = "button-container";
+function makeButton(text, hoverText, onClick) {
+  const button = document.createElement("div");
+  button.className = "big-button";
+  button.textContent = text;
 
-    let buttonsToShow = [];
+  button.addEventListener("mouseover", () => {
+    button.textContent = hoverText;
+  });
 
-    if (node === tree) {
-        buttonsToShow = [node];
-    } else if (node.children && node.children.length > 0) {
-        buttonsToShow = node.children;
-    } else {
-        const leaf = document.createElement("div");
-        leaf.textContent = "This leaf has no content yet.";
-        leaf.style.fontSize = "28px";
-        leaf.style.textAlign = "center";
-        app.appendChild(leaf);
-        backButton.hidden = historyStack.length === 0;
-        return;
-    }
+  button.addEventListener("mouseout", () => {
+    button.textContent = text;
+  });
 
-    buttonsToShow.forEach((child) => {
-        const button = document.createElement("div");
-        button.className = "big-button";
+  button.addEventListener("click", onClick);
 
-        if (buttonsToShow.length === 1) {
-            button.classList.add("single-button");
-        }
+  return button;
+}
 
-        button.textContent = child.label;
+function renderRoot() {
+  app.innerHTML = "";
 
-        button.addEventListener("mouseover", () => {
-            button.textContent = child.hover || child.label;
-        });
+  const container = document.createElement("div");
+  container.className = "button-container";
 
-        button.addEventListener("mouseout", () => {
-            button.textContent = child.label;
-        });
+  const button = makeButton(tree.label, tree.hover, renderChildren);
+  button.classList.add("single-button");
 
-        button.addEventListener("click", () => {
-            if (child.children && child.children.length > 0) {
-                historyStack.push(currentNode);
-                currentNode = child;
-                renderNode(currentNode);
-            } else if (child !== tree) {
-                historyStack.push(currentNode);
-                currentNode = child;
-                renderNode(currentNode);
-            } else if (child === tree) {
-                historyStack.push(currentNode);
-                currentNode = child;
-                renderNode(currentNode);
-            }
-        });
+  container.appendChild(button);
+  app.appendChild(container);
 
-        container.appendChild(button);
+  backButton.hidden = true;
+  showingRoot = true;
+}
+
+function renderChildren() {
+  app.innerHTML = "";
+
+  const container = document.createElement("div");
+  container.className = "button-container";
+
+  tree.children.forEach((child) => {
+    const button = makeButton(child.label, child.hover, () => {
+      alert(child.hover);
     });
+    container.appendChild(button);
+  });
 
-    app.appendChild(container);
-    backButton.hidden = historyStack.length === 0;
+  app.appendChild(container);
+
+  backButton.hidden = false;
+  showingRoot = false;
 }
 
 backButton.addEventListener("click", () => {
-    if (historyStack.length > 0) {
-        currentNode = historyStack.pop();
-        renderNode(currentNode);
-    }
+  renderRoot();
 });
 
-renderNode(currentNode);
+renderRoot();
