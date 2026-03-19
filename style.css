@@ -29,10 +29,9 @@ body {
 }
 
 #app {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 40px;
     box-sizing: border-box;
 }
@@ -101,4 +100,27 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-style: italic;
   opacity: 0.75;
+}
+.top-bar {
+    width: min(1000px, 90vw);
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#back-button {
+    position: absolute;
+    left: 0;
+}
+
+.navigation-hint {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+    font-family: "Courier New", Courier, monospace;
+    font-style: italic;
+    opacity: 0.75;
+    margin: 0;
 }
