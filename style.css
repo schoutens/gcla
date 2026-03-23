@@ -6,14 +6,18 @@ body {
     font-family: Georgia, serif;
 }
 
-#nav {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
+.top-bar {
+    width: min(1000px, 90vw);
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 #back-button {
+    position: absolute;
+    left: 0;
     background: #222;
     color: #bbb;
     border: 1px solid #666;
@@ -21,11 +25,22 @@ body {
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: Georgia, serif;
 }
 
 #back-button:hover {
     background: #ddd;
     color: #111;
+}
+
+.navigation-hint {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+    font-family: "Courier New", Courier, monospace;
+    font-style: italic;
+    opacity: 0.75;
+    margin: 0;
 }
 
 #app {
@@ -70,85 +85,12 @@ body {
     max-width: 80vw;
     justify-self: center;
 }
-.big-button {
-  display: block;
-  margin: 0.75rem auto;
-  padding: 0.9rem 1.4rem;
-  border: 1px solid #777;
-  border-radius: 10px;
-  background: #f8f6f2;
-  color: #222;
-  font-size: 1rem;
-  font-family: Georgia, "Times New Roman", serif;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  max-width: 80%;
-}
 
-.big-button:hover {
-  background: #ece7dc;
-  transform: scale(1.02);
-}
-
-.navigation-hint {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  font-size: 0.95rem;
-  color: #666;
-  font-family: "Courier New", Courier, monospace;
-  font-style: italic;
-  opacity: 0.75;
-}
-.top-bar {
-    width: min(1000px, 90vw);
-    margin: 20px auto 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-#back-button {
-    position: absolute;
-    left: 0;
-}
-
-.navigation-hint {
+.leaf-content {
+    max-width: 800px;
+    padding: 20px;
+    font-size: 28px;
+    line-height: 1.5;
     text-align: center;
-    font-size: 0.95rem;
-    color: #666;
-    font-family: "Courier New", Courier, monospace;
-    font-style: italic;
-    opacity: 0.75;
-    margin: 0;
-}
-top-bar {
-  width: 100%;
-  max-width: 900px;
-  margin: 20px auto 10px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-#back-button {
-  position: absolute;
-  left: 0;
-  padding: 6px 12px;
-  border: 1px solid #888;
-  background: #f4f1ea;
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: Georgia, serif;
-}
-
-.navigation-hint {
-  font-size: 0.9rem;
-  color: #666;
-  font-family: "Courier New", monospace;
-  font-style: italic;
-  opacity: 0.75;
+    margin: 0 auto;
 }
