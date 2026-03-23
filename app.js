@@ -2,22 +2,27 @@ const app = document.getElementById("app");
 const backButton = document.getElementById("back-button");
 
 const tree = {
+  id: "gcla",
   label: "GCLA",
   hover: "Grand Chronicle of Late Antiquity",
   children: [
     {
+      id: "h2r",
       label: "H2R",
       hover: "Hero to Rebel"
     },
     {
+      id: "o2p",
       label: "O2P",
       hover: "Orphan to Princess"
     },
     {
+      id: "elb",
       label: "ELB",
       hover: "Ex Libris Boranis",
       children: [
         {
+          id: "vt",
           label: "VT",
           hover: "The Storybook of Varaztirots the Armenian"
         }
@@ -48,7 +53,62 @@ function makeButton(node, onClick) {
   return button;
 }
 
-function renderHome() {
+function getPath(node, targetId, path = []) {
+  const newPath = [...path, node];
+
+  if (node.id === targetId) {
+    return newPath;
+  }
+
+  if (!node.children) {
+    return null;
+  }
+
+  for (const child of node.children) {
+    const result = getPath(child, targetId, newPath);
+    if (result) {
+      return result;
+    }
+  }
+
+  return null;
+}
+
+function getNodeByPath(pathIds) {
+  let node = tree;
+
+  if (pathIds.length === 0) {
+    return tree;
+  }
+
+  if (pathIds[0] !== tree.id) {
+    return null;
+  }
+
+  for (let i = 1; i < pathIds.length; i++) {
+    if (!node.children) {
+      return null;
+    }
+
+    const next = node.children.find(child => child.id === pathIds[i]);
+    if (!next) {
+      return null;
+    }
+    node = next;
+  }
+
+  return node;
+}
+
+function setHashForNode(node) {
+  const path = getPath(tree, node.id);
+  if (!path) return;
+
+  const hash = path.map(n => n.id).join("/");
+  window.location.hash = hash;
+}
+
+function renderHome(updateHash = true) {
   currentView = "home";
   currentNode = null;
   app.innerHTML = "";
@@ -66,9 +126,13 @@ function renderHome() {
   app.appendChild(container);
 
   backButton.hidden = true;
+
+  if (updateHash) {
+    window.location.hash = "";
+  }
 }
 
-function renderChildren(node) {
+function renderChildren(node, updateHash = true) {
   currentView = "children";
   currentNode = node;
   app.innerHTML = "";
@@ -76,7 +140,7 @@ function renderChildren(node) {
   const children = node.children || [];
 
   if (children.length === 0) {
-    renderLeaf(node);
+    renderLeaf(node, updateHash);
     return;
   }
 
@@ -103,22 +167,50 @@ function renderChildren(node) {
 
   app.appendChild(container);
   backButton.hidden = false;
+
+  if (updateHash) {
+    setHashForNode(node);
+  }
 }
 
-function renderLeaf(node) {
+function renderLeaf(node, updateHash = true) {
   currentView = "leaf";
   currentNode = node;
   app.innerHTML = "";
 
   const leaf = document.createElement("div");
-  leaf.style.textAlign = "center";
-  leaf.style.fontSize = "28px";
-  leaf.style.maxWidth = "800px";
-  leaf.style.padding = "20px";
+  leaf.className = "leaf-content";
   leaf.textContent = node.hover || node.label;
 
   app.appendChild(leaf);
   backButton.hidden = false;
+
+  if (updateHash) {
+    setHashForNode(node);
+  }
+}
+
+function loadFromHash() {
+  const hash = window.location.hash.replace(/^#/, "").trim();
+
+  if (!hash) {
+    renderHome(false);
+    return;
+  }
+
+  const pathIds = hash.split("/").filter(Boolean);
+  const node = getNodeByPath(pathIds);
+
+  if (!node) {
+    renderHome(false);
+    return;
+  }
+
+  if (node.children && node.children.length > 0) {
+    renderChildren(node, false);
+  } else {
+    renderLeaf(node, false);
+  }
 }
 
 backButton.addEventListener("click", () => {
@@ -136,4 +228,6 @@ backButton.addEventListener("click", () => {
   }
 });
 
-renderHome();
+window.addEventListener("hashchange", loadFromHash);
+
+loadFromHash();
