@@ -81,11 +81,12 @@ function getNodeByPath(pathIds) {
     return tree;
   }
 
-  if (pathIds[0] !== tree.id) {
-    return null;
+  let startIndex = 0;
+  if (pathIds[0] === tree.id) {
+    startIndex = 1;
   }
 
-  for (let i = 1; i < pathIds.length; i++) {
+  for (let i = startIndex; i < pathIds.length; i++) {
     if (!node.children) {
       return null;
     }
@@ -104,7 +105,11 @@ function setHashForNode(node) {
   const path = getPath(tree, node.id);
   if (!path) return;
 
-  const hash = path.map(n => n.id).join("/");
+  const hash = path
+    .map(n => n.id)
+    .slice(1)
+    .join("/");
+
   window.location.hash = hash;
 }
 
