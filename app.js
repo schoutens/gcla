@@ -1,35 +1,7 @@
 const app = document.getElementById("app");
 const backButton = document.getElementById("back-button");
 
-const tree = {
-  id: "gcla",
-  label: "GCLA",
-  hover: "Grand Chronicle of Late Antiquity",
-  children: [
-    {
-      id: "h2r",
-      label: "H2R",
-      hover: "Hero to Rebel"
-    },
-    {
-      id: "o2p",
-      label: "O2P",
-      hover: "Orphan to Princess"
-    },
-    {
-      id: "elb",
-      label: "ELB",
-      hover: "Ex Libris Boranis",
-      children: [
-        {
-          id: "vt",
-          label: "VT",
-          hover: "The Storybook of Varaztirots the Armenian"
-        }
-      ]
-    }
-  ]
-};
+let tree = null;
 
 let historyStack = [];
 let currentView = "home";
@@ -260,4 +232,13 @@ backButton.addEventListener("click", () => {
 
 window.addEventListener("hashchange", loadFromHash);
 
-loadFromHash();
+fetch("tree.json")
+  .then(res => res.json())
+  .then(data => {
+    tree = data;
+    loadFromHash();
+  })
+  .catch(err => {
+    console.error("Tree failed to load", err);
+    app.textContent = "Site structure failed to load.";
+  });
