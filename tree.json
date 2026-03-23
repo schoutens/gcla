@@ -24,14 +24,14 @@
           "hover": "The Storybook of Varaztirots the Armenian",
           "children": [
             {
-              "id": "intro",
-              "label": "INTRO",
+              "id": "int",
+              "label": "INT",
               "hover": "Introduction"
             },
             {
               "id": "3ps",
               "label": "3PS",
-              "hover": "The THree Princes of Serendipity"
+              "hover": "The Three Princes of Serendipity"
             }
           ]
         }
