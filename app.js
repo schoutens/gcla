@@ -185,14 +185,31 @@ function loadFromHash() {
     return;
   }
 
+  // Rebuild history exactly as if the user had clicked down from home
+  historyStack.push({ view: "home", node: null });
+
   let current = tree;
 
-  for (const id of pathIds.slice(0, -1)) {
+  for (const id of pathIds) {
     historyStack.push({ view: "children", node: current });
+
+    if (!current.children) {
+      renderHome(false);
+      return;
+    }
+
     current = current.children.find(c => c.id === id);
+
+    if (!current) {
+      renderHome(false);
+      return;
+    }
   }
 
   if (node.children && node.children.length > 0) {
+    // For a non-leaf node, the last pushed item represents the current screen,
+    // so remove it from history
+    historyStack.pop();
     renderChildren(node, false);
   } else {
     renderLeaf(node, false);
