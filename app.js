@@ -198,18 +198,16 @@ function loadFromHash() {
       return;
     }
 
-    current = current.children.find(c => c.id === id);
-
-    if (!current) {
+    const next = current.children.find(c => c.id === id);
+    if (!next) {
       renderHome(false);
       return;
     }
+
+    current = next;
   }
 
   if (node.children && node.children.length > 0) {
-    // For a non-leaf node, the last pushed item represents the current screen,
-    // so remove it from history
-    historyStack.pop();
     renderChildren(node, false);
   } else {
     renderLeaf(node, false);
