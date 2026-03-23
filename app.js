@@ -170,7 +170,7 @@ function renderLeaf(node, updateHash = true) {
 function loadFromHash() {
   const hash = window.location.hash.replace(/^#/, "").trim();
 
-  historyStack = [];   // rebuild navigation history
+  historyStack = [];
 
   if (!hash) {
     renderHome(false);
@@ -185,27 +185,11 @@ function loadFromHash() {
     return;
   }
 
-  // Build history path
   let current = tree;
 
   for (const id of pathIds.slice(0, -1)) {
     historyStack.push({ view: "children", node: current });
     current = current.children.find(c => c.id === id);
-  }
-
-  if (node.children && node.children.length > 0) {
-    renderChildren(node, false);
-  } else {
-    renderLeaf(node, false);
-  }
-}
-
-  const pathIds = hash.split("/").filter(Boolean);
-  const node = getNodeByPath(pathIds);
-
-  if (!node) {
-    renderHome(false);
-    return;
   }
 
   if (node.children && node.children.length > 0) {
