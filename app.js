@@ -77,10 +77,16 @@ function setHashForNode(node) {
   const path = getPath(tree, node.id);
   if (!path) return;
 
-  const hash = path
-    .map(n => n.id)
-    .slice(1)
-    .join("/");
+  let hash;
+
+  if (node.id === tree.id) {
+    hash = tree.id; // "gcla"
+  } else {
+    hash = path
+      .map(n => n.id)
+      .slice(1)
+      .join("/");
+  }
 
   window.location.hash = hash;
 }
@@ -177,6 +183,12 @@ function loadFromHash() {
     return;
   }
 
+  if (hash === tree.id) {
+    historyStack.push({ view: "home", node: null });
+    renderChildren(tree, false);
+    return;
+  }
+
   const pathIds = hash.split("/").filter(Boolean);
   const node = getNodeByPath(pathIds);
 
@@ -185,7 +197,6 @@ function loadFromHash() {
     return;
   }
 
-  // Rebuild history exactly as if the user had clicked down from home
   historyStack.push({ view: "home", node: null });
 
   let current = tree;
