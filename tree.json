@@ -28,11 +28,26 @@
               "label": "INT",
               "hover": "Introduction",
               "pdf": "pdf/VTIntro.pdf"
-},
+            },
             {
               "id": "3ps",
               "label": "3PS",
               "hover": "The Three Princes of Serendipity"
+            },
+            {
+              "id": "ta",
+              "label": "TA",
+              "hover": "The Tower of Arrogance"
+            },
+            {
+              "id": "led",
+              "label": "LED",
+              "hover": "The Lair of the Evil Dragon"
+            },
+            {
+              "id": "ww",
+              "label": "WW",
+              "hover": "The Wailing Whale"
             }
           ]
         }
