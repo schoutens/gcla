@@ -6,12 +6,46 @@
     {
       "id": "h2r",
       "label": "H2R",
-      "hover": "Hero to Rebel"
+      "hover": "Hero to Rebel",
+      "children":[
+        {
+              "id": "b",
+              "label": "B",
+              "hover": "The Cycle of Wahram Chobin"
+        },
+        {
+              "id": "v",
+              "label": "V",
+              "hover": "The Cycle of Wistahm Spahbedan"
+        },
+        {
+              "id": "s",
+              "label": "S",
+              "hover": "The Cycle of Pirag Shahrwaraz"
+        },
+        {
+              "id": "f",
+              "label": "F",
+              "hover": "The Cycle of Farrokhzad Bav"
+        }
+      ]
     },
     {
       "id": "o2p",
       "label": "O2P",
-      "hover": "Orphan to Princess"
+      "hover": "Orphan to Princess",
+      "children":[
+        {
+              "id": "r2p",
+              "label": "R2P",
+              "hover": "All Roads Lead to Persia"
+        },
+        {
+              "id": "qg",
+              "label": "QG",
+              "hover": "The Queens' Gambit"
+        }
+      ]
     },
     {
       "id": "elb",
