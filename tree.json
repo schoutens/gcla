@@ -11,12 +11,46 @@
         {
               "id": "b",
               "label": "B",
-              "hover": "The Cycle of Wahram Chobin"
+              "hover": "The Cycle of Wahram Chobin",
+              "children":[
+                          {
+                                "id": "b1",
+                                "label": "Book 1",
+                                "hover": "Chobin"
+                          },
+                          {
+                                "id": "b2",
+                                "label": "Book 2",
+                                "hover": "Mihrwandak"
+                          },
+                          {
+                                "id": "b3",
+                                "label": "Book 3",
+                                "hover": "Khwarrahormand"
+                          }
+                          ]
         },
         {
               "id": "v",
               "label": "V",
-              "hover": "The Cycle of Wistahm Spahbedan"
+              "hover": "The Cycle of Wistahm Spahbedan",
+              "children":[
+                          {
+                                "id": "v1",
+                                "label": "Book 1",
+                                "hover": "Brothers and Sisters"
+                          },
+                          {
+                                "id": "v2",
+                                "label": "Book 2",
+                                "hover": "Husbands and Wives"
+                          },
+                          {
+                                "id": "v3",
+                                "label": "Book 3",
+                                "hover": "Country and Home"
+                          }
+                          ]
         },
         {
               "id": "s",
