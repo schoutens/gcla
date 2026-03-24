@@ -94,7 +94,17 @@ body {
     text-align: center;
     margin: 0 auto;
 }
+.pdf-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
 .pdf-frame {
+    display: block;
     width: 90vw;
     height: 80vh;
     border: none;

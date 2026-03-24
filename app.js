@@ -162,16 +162,19 @@ function renderLeaf(node, updateHash = true) {
   app.innerHTML = "";
 
   if (node.pdf) {
+    const container = document.createElement("div");
+    container.className = "pdf-container";
+
     const iframe = document.createElement("iframe");
     iframe.src = node.pdf;
     iframe.className = "pdf-frame";
 
-    app.appendChild(iframe);
+    container.appendChild(iframe);
+    app.appendChild(container);
   } else {
     const leaf = document.createElement("div");
     leaf.className = "leaf-content";
     leaf.textContent = node.hover || node.label;
-
     app.appendChild(leaf);
   }
 
