@@ -130,3 +130,16 @@ body {
     height: 80vh;
     border: none;
 }
+.site-footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 10px;
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.footer-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
