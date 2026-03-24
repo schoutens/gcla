@@ -26,8 +26,9 @@
             {
               "id": "int",
               "label": "INT",
-              "hover": "Introduction"
-            },
+              "hover": "Introduction",
+              "pdf": "pdf/VTIntro.pdf"
+},
             {
               "id": "3ps",
               "label": "3PS",

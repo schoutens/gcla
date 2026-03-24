@@ -161,11 +161,20 @@ function renderLeaf(node, updateHash = true) {
   currentNode = node;
   app.innerHTML = "";
 
-  const leaf = document.createElement("div");
-  leaf.className = "leaf-content";
-  leaf.textContent = node.hover || node.label;
+  if (node.pdf) {
+    const iframe = document.createElement("iframe");
+    iframe.src = node.pdf;
+    iframe.className = "pdf-frame";
 
-  app.appendChild(leaf);
+    app.appendChild(iframe);
+  } else {
+    const leaf = document.createElement("div");
+    leaf.className = "leaf-content";
+    leaf.textContent = node.hover || node.label;
+
+    app.appendChild(leaf);
+  }
+
   backButton.hidden = false;
 
   if (updateHash) {
