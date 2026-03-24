@@ -94,3 +94,8 @@ body {
     text-align: center;
     margin: 0 auto;
 }
+.pdf-frame {
+    width: 90vw;
+    height: 80vh;
+    border: none;
+}
