@@ -93,7 +93,7 @@
           "children": [
             {
               "id": "int",
-              "label": "INT",
+              "label": "INTRO",
               "hover": "Introduction",
               "pdf": "pdf/VTIntro.pdf"
             },
