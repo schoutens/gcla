@@ -72,7 +72,8 @@
         {
               "id": "r2p",
               "label": "R2P",
-              "hover": "All Roads Lead to Persia"
+              "hover": "All Roads Lead to Persia",
+              "pdf": "pdf/O2P1.pdf"
         },
         {
               "id": "qg",
