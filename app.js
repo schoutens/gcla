@@ -174,7 +174,8 @@ function renderLeaf(node, updateHash = true) {
   } else {
     const leaf = document.createElement("div");
     leaf.className = "leaf-content";
-    leaf.textContent = node.hover || node.label;
+    leaf.textContent = node.text || node.hover || node.label;
+
     app.appendChild(leaf);
   }
 
