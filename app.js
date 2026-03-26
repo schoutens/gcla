@@ -286,3 +286,28 @@ fetch("tree.json")
     console.error("Tree failed to load", err);
     app.textContent = "Site structure failed to load.";
   });
+
+  #site-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            115deg,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.03) 42%,
+            rgba(255,255,255,0.06) 50%,
+            rgba(255,255,255,0.03) 58%,
+            rgba(255,255,255,0) 100%
+        );
+    transform: translateX(-35%);
+    animation: silkGlow 10s ease-in-out infinite;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+@keyframes silkGlow {
+    0%   { transform: translateX(-35%); opacity: 0.15; }
+    50%  { transform: translateX(10%); opacity: 0.28; }
+    100% { transform: translateX(-35%); opacity: 0.15; }
+}
