@@ -54,58 +54,76 @@ body {
 
 .button-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-    width: min(1000px, 90vw);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .big-button {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 220px;
-    min-height: 90px;
-    padding: 20px 28px;
-    background: linear-gradient(to bottom, #3a3a3a 0%, #222 100%);
-    color: #ddd;
-    border: 1px solid #666;
-    border-top: 1px solid #888;
+    width: 100%;
+    min-height: 110px;
+    padding: 18px 20px;
+    box-sizing: border-box;
+
+    background: linear-gradient(to bottom, #4a4a4a 0%, #232323 100%);
+    color: #e6e6e6;
+
+    border: 1px solid #777;
+    border-top: 1px solid #a0a0a0;
+    border-left: 1px solid #8e8e8e;
+    border-right: 1px solid #555;
     border-bottom: 3px solid #111;
-    border-radius: 14px;
+    border-radius: 16px;
+
     box-shadow:
-        0 6px 14px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.10),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.25);
-    font-size: 32px;
-    letter-spacing: 1px;
+        0 3px 0 #111,
+        0 8px 18px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.28);
+
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-family: Georgia, serif;
+
     cursor: pointer;
     user-select: none;
     transition:
-        transform 0.12s ease,
-        box-shadow 0.12s ease,
+        transform 0.14s ease,
+        box-shadow 0.14s ease,
         background 0.2s ease,
         color 0.2s ease;
 }
 
 .big-button:hover {
-    background: linear-gradient(to bottom, #4a4a4a 0%, #2a2a2a 100%);
+    background: linear-gradient(to bottom, #565656 0%, #2a2a2a 100%);
     color: #fff;
+    transform: translateY(-2px);
     box-shadow:
-        0 8px 18px rgba(0, 0, 0, 0.42),
-        inset 0 1px 0 rgba(255, 255, 255, 0.14),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.25);
-    transform: translateY(-1px);
+        0 5px 0 #111,
+        0 12px 22px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.28);
 }
+
 .big-button:active {
     transform: translateY(2px);
     box-shadow:
-        0 2px 6px rgba(0, 0, 0, 0.35),
-        inset 0 2px 4px rgba(0, 0, 0, 0.22);
+        0 1px 0 #111,
+        0 4px 8px rgba(0, 0, 0, 0.32),
+        inset 0 2px 5px rgba(0, 0, 0, 0.3);
     border-bottom: 1px solid #111;
 }
 
 .single-button {
-    min-width: 280px;
+    max-width: 420px;
+    justify-self: center;
 }
 
 .leaf-content {
