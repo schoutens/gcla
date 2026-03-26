@@ -120,6 +120,11 @@
               "hover": "The Wailing Whale"
             }
           ]
+        },
+        {
+          "id": "gt",
+          "label": "GT",
+          "hover": "A Gothic Tale"
         }
       ]
     }
