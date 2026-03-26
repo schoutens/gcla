@@ -275,3 +275,10 @@ body {
     50%  { transform: translateX(10%); opacity: 0.28; }
     100% { transform: translateX(-35%); opacity: 0.15; }
 }
+.button-label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 1.25;
+    word-break: break-word;
+}
