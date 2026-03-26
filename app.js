@@ -10,14 +10,18 @@ let currentNode = null;
 function makeButton(node, onClick) {
   const button = document.createElement("div");
   button.className = "big-button";
-  button.textContent = node.label;
+
+  const label = document.createElement("span");
+  label.className = "button-label";
+  label.textContent = node.label;
+  button.appendChild(label);
 
   button.addEventListener("mouseover", () => {
-    button.textContent = node.hover || node.label;
+    label.textContent = node.hover || node.label;
   });
 
   button.addEventListener("mouseout", () => {
-    button.textContent = node.label;
+    label.textContent = node.label;
   });
 
   button.addEventListener("click", onClick);
@@ -137,27 +141,7 @@ function renderHome(updateHash = true) {
     window.location.hash = "";
   }
 }
-function updateHeaderForNode(node) {
-  const header = document.getElementById("site-header");
-  if (!header || !tree) return;
 
-  header.classList.remove("branch-gcla", "branch-h2r", "branch-o2p", "branch-elb");
-
-  let branchClass = "branch-gcla";
-
-  const path = getPath(tree, node ? node.id : tree.id) || [tree];
-  const firstChild = path[1] ? path[1].id : tree.id;
-
-  if (firstChild === "h2r") {
-    branchClass = "branch-h2r";
-  } else if (firstChild === "o2p") {
-    branchClass = "branch-o2p";
-  } else if (firstChild === "elb") {
-    branchClass = "branch-elb";
-  }
-
-  header.classList.add(branchClass);
-}
 
 function renderChildren(node, updateHash = true) {
   currentView = "children";
