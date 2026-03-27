@@ -124,7 +124,35 @@
         {
           "id": "gt",
           "label": "GT",
-          "hover": "A Gothic Tale"
+          "hover": "A Gothic Tale",
+          "children":[
+            {
+              "id": "md",
+              "label": "MD",
+              "hover": "The Master of the Demons"
+            },
+            {
+              "id": "ap",
+              "label": "AP",
+              "hover": "The Arian Princess"
+            },
+            {
+              "id": "hc",
+              "label": "HC",
+              "hover": "The Hunnic Curse"
+            },
+            {
+              "id": "qp",
+              "label": "QP",
+              "hover": "The Queen's Potion"
+            },
+            {
+              "id": "cr",
+              "label": "CR",
+              "hover": "The Castle of Remembrance"
+            }
+
+          ]
         }
       ]
     }
