@@ -128,27 +128,27 @@
           "children":[
             {
               "id": "md",
-              "label": "MD",
+              "label": "Part I",
               "hover": "The Master of the Demons"
             },
             {
               "id": "ap",
-              "label": "AP",
+              "label": "Part II",
               "hover": "The Arian Princess"
             },
             {
               "id": "hc",
-              "label": "HC",
+              "label": "Part III",
               "hover": "The Hunnic Curse"
             },
             {
               "id": "qp",
-              "label": "QP",
+              "label": "Part IV",
               "hover": "The Queen's Potion"
             },
             {
               "id": "cr",
-              "label": "CR",
+              "label": "Part V",
               "hover": "The Castle of Remembrance"
             }
 
