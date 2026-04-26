@@ -185,6 +185,57 @@ function renderChildren(node, updateHash = true) {
   }
 }
 
+function makeShareButtons(node) {
+  if (!node.share) return null;
+
+  const shareBox = document.createElement("div");
+  shareBox.className = "share-box";
+
+  const pageUrl = window.location.href;
+  const pageTitle = node.hover || node.label || "GCLA";
+
+  const links = [
+    {
+      label: "Facebook",
+      url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`
+    },
+    {
+      label: "X",
+      url: `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`
+    },
+    {
+      label: "Email",
+      url: `mailto:?subject=${encodeURIComponent(pageTitle)}&body=${encodeURIComponent(pageUrl)}`
+    }
+  ];
+
+  links.forEach(item => {
+    const link = document.createElement("a");
+    link.className = "share-button";
+    link.textContent = item.label;
+    link.href = item.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    shareBox.appendChild(link);
+  });
+
+  const copyButton = document.createElement("button");
+  copyButton.className = "share-button";
+  copyButton.textContent = "Copy link";
+
+  copyButton.addEventListener("click", async () => {
+    await navigator.clipboard.writeText(pageUrl);
+    copyButton.textContent = "Copied";
+    setTimeout(() => {
+      copyButton.textContent = "Copy link";
+    }, 1500);
+  });
+
+  shareBox.appendChild(copyButton);
+
+  return shareBox;
+}
+
 function renderLeaf(node, updateHash = true) {
   currentView = "leaf";
   currentNode = node;
@@ -208,7 +259,10 @@ function renderLeaf(node, updateHash = true) {
 
     app.appendChild(leaf);
   }
-
+  const shareButtons = makeShareButtons(node);
+  if (shareButtons) {
+    app.appendChild(shareButtons);
+  }
   backButton.hidden = false;
 
   if (updateHash) {

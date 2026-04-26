@@ -96,7 +96,8 @@
               "id": "int",
               "label": "INTRO",
               "hover": "Introduction",
-              "pdf": "pdf/VTIntro.pdf"
+              "pdf": "pdf/VTIntro.pdf",
+              "share": true
             },
             {
               "id": "3ps",
