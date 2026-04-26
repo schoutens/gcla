@@ -282,3 +282,27 @@ body {
     line-height: 1.25;
     word-break: break-word;
 }
+
+.share-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-end;
+    margin: 20px 30px 0;
+}
+
+.share-button {
+    background: #222;
+    color: #bbb;
+    border: 1px solid #666;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.share-button:hover {
+    background: #ddd;
+    color: #111;
+}
