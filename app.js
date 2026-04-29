@@ -277,8 +277,15 @@ function renderLeaf(node, updateHash = true) {
   text.textContent = node.patreonText || "Continue into the commentary layer";
 
   const link = document.createElement("a");
-  link.href = node.patreon;
+
+  let url = node.patreon;
+  if (!url.startsWith("http")) {
+    url = "https://" + url;
+  }
+
+  link.href = url;
   link.target = "_blank";
+  link.rel = "noopener noreferrer";
   link.className = "patreon-button";
   link.textContent = "Enter";
 
