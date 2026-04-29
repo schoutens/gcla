@@ -268,31 +268,30 @@ function renderLeaf(node, updateHash = true) {
   if (updateHash) {
     setHashForNode(node);
   }
-  if (node.patreon) {
-  const box = document.createElement("div");
-  box.className = "patreon-box";
+    if (node.patreon) {
+    const box = document.createElement("div");
+    box.className = "patreon-box";
 
-  const text = document.createElement("div");
-  text.className = "patreon-text";
-  text.textContent = node.patreonText || "Continue into the commentary layer";
+    const text = document.createElement("div");
+    text.className = "patreon-text";
+    text.textContent = node.patreonText || "Continue into the commentary layer";
 
-  const link = document.createElement("a");
+    const link = document.createElement("a");
+    link.href = node.patreon;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.className = "patreon-button";
+    link.textContent = "Enter";
 
-  let url = node.patreon;
-  if (!url.startsWith("http")) {
-    url = "https://" + url;
+    box.appendChild(text);
+    box.appendChild(link);
+    app.appendChild(box);
   }
 
-  link.href = url;
-  link.target = "_blank";
-  link.rel = "noopener noreferrer";
-  link.className = "patreon-button";
-  link.textContent = "Enter";
-
-  box.appendChild(text);
-  box.appendChild(link);
-  app.appendChild(box);
-}
+  const shareButtons = makeShareButtons(node);
+  if (shareButtons) {
+    app.appendChild(shareButtons);
+  }
 }
 
 function loadFromHash() {
