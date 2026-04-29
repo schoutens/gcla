@@ -259,16 +259,9 @@ function renderLeaf(node, updateHash = true) {
 
     app.appendChild(leaf);
   }
-  const shareButtons = makeShareButtons(node);
-  if (shareButtons) {
-    app.appendChild(shareButtons);
-  }
-  backButton.hidden = false;
 
-  if (updateHash) {
-    setHashForNode(node);
-  }
-    if (node.patreon) {
+  
+  if (node.patreon) {
     const box = document.createElement("div");
     box.className = "patreon-box";
 
@@ -292,6 +285,13 @@ function renderLeaf(node, updateHash = true) {
   if (shareButtons) {
     app.appendChild(shareButtons);
   }
+
+  backButton.hidden = false;
+
+  if (updateHash) {
+    setHashForNode(node);
+  }
+  
 }
 
 function loadFromHash() {
