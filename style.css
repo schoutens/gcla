@@ -46,8 +46,9 @@ body {
 #app {
     min-height: calc(100vh - 220px);
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     padding: 40px 20px 20px;
     box-sizing: border-box;
 }
