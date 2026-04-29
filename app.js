@@ -268,6 +268,24 @@ function renderLeaf(node, updateHash = true) {
   if (updateHash) {
     setHashForNode(node);
   }
+  if (node.patreon) {
+  const box = document.createElement("div");
+  box.className = "patreon-box";
+
+  const text = document.createElement("div");
+  text.className = "patreon-text";
+  text.textContent = node.patreonText || "Continue into the commentary layer";
+
+  const link = document.createElement("a");
+  link.href = node.patreon;
+  link.target = "_blank";
+  link.className = "patreon-button";
+  link.textContent = "Enter";
+
+  box.appendChild(text);
+  box.appendChild(link);
+  app.appendChild(box);
+}
 }
 
 function loadFromHash() {

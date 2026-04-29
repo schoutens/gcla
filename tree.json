@@ -105,7 +105,9 @@
               "hover": "The Three Princes of Serendipity",
               "text": "This story is not yet available online. Please come back later.",
               "pdf": "pdf/3PS.pdf",
-              "share": true
+              "share": true,
+              "patreon": "https://www.patreon.com/posts/notes-on-3ps-156882762?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link",
+              "patreonText": "Continue on patreon.com for some supplementary notes"
             },
             {
               "id": "ta",
