@@ -117,12 +117,50 @@
             {
               "id": "led",
               "label": "LED",
-              "hover": "The Lair of the Evil Dragon"
+              "hover": "The Lair of the Evil Dragon",
+              "text": "Coming soon to a computer near you"
             },
             {
               "id": "ww",
               "label": "WW",
-              "hover": "The Wailing Whale"
+              "hover": "The Wailing Whale",
+              "text": "Coming soon to a computer near you"
+            },
+            {
+              "id": "sbc",
+              "label": "SBC",
+              "hover": "The Silver Book of Cantations",
+              "text": "Coming soon to a computer near you"
+            },
+            {
+              "id": "3dh",
+              "label": "3DH",
+              "hover": "The Three Devs of Hrom",
+              "text": "Coming soon to a computer near you"
+            },
+            {
+              "id": "hws",
+              "label": "HWS",
+              "hover": "A Holy Wood Story",
+              "text": "Coming soon to a computer near you"
+            },
+            {
+              "id": "fg",
+              "label": "FG",
+              "hover": "The Forgotten God",
+              "text": "Coming soon to a computer near you"
+            },
+            {
+              "id": "dsl",
+              "label": "DSL",
+              "hover": "The Den of the Square Lion",
+              "text": "Coming soon to a computer near you"
+            },
+            {
+              "id": "sgi",
+              "label": "SGI",
+              "hover": "The Statue of the God Incarnate",
+              "text": "Coming soon to a computer near you"
             }
           ]
         },
