@@ -111,7 +111,8 @@
             {
               "id": "ta",
               "label": "TA",
-              "hover": "The Tower of Arrogance"
+              "hover": "The Tower of Arrogance",
+              "text": "Coming soon to a computer near you"
             },
             {
               "id": "led",
