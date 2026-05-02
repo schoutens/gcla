@@ -261,7 +261,7 @@ function renderLeaf(node, updateHash = true) {
   }
 
   
-  if (node.patreon) {
+  if (node.patreon && node.patreonEnabled !== false) {
     const box = document.createElement("div");
     box.className = "patreon-box";
 

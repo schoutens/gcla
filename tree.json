@@ -106,7 +106,8 @@
               "pdf": "pdf/3PS.pdf",
               "share": true,
               "patreon": "https://www.patreon.com/posts/156882762",
-              "patreonText": "Check out the chronicler's notes"
+              "patreonText": "Check out the chronicler's notes",
+              "patreonEnabled": false
             },
             {
               "id": "ta",
