@@ -114,7 +114,10 @@
               "id": "ta",
               "label": "TA",
               "hover": "The Tower of Arrogance",
-              "text": "Coming soon to a computer near you"
+              "text": "Coming soon to a computer near you",
+              "pdf": "pdf/TA.pdf",
+              "share": false,
+              "pdfEnabled": false
             },
             {
               "id": "led",

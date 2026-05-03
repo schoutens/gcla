@@ -242,7 +242,7 @@ function renderLeaf(node, updateHash = true) {
   app.innerHTML = "";
   updateHeaderForNode(node);
 
-  if (node.pdf) {
+  if (node.pdf && node.pdfEnabled !== false) {
     const container = document.createElement("div");
     container.className = "pdf-container";
 
