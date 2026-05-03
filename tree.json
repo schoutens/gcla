@@ -117,7 +117,7 @@
               "text": "Coming soon to a computer near you",
               "pdf": "pdf/TA.pdf",
               "share": false,
-              "pdfEnabled": false
+              "pdfEnabled": true
             },
             {
               "id": "led",
