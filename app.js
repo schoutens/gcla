@@ -247,7 +247,15 @@ function renderLeaf(node, updateHash = true) {
     container.className = "pdf-container";
 
     const iframe = document.createElement("iframe");
-    iframe.src = node.pdf;
+    function isIOS() {
+    return /iPhone|iPad|iPod/.test(navigator.userAgent);
+    }
+
+    if (isIOS()) {
+        window.location.href = node.pdf;   // open full-screen
+    } else {
+        iframe.src = node.pdf;             // keep iframe for desktop
+    };
     iframe.className = "pdf-frame";
 
     container.appendChild(iframe);
