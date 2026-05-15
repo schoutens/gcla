@@ -108,7 +108,7 @@
               "share": true,
               "patreon": "https://www.patreon.com/posts/156882762",
               "patreonText": "Check out the chronicler's notes",
-              "patreonEnabled": false
+              "patreonEnabled": true
             },
             {
               "id": "ta",
@@ -116,8 +116,11 @@
               "hover": "The Tower of Arrogance",
               "text": "Coming soon to a computer near you",
               "pdf": "pdf/TA.pdf",
-              "share": false,
-              "pdfEnabled": true
+              "share": true,
+              "pdfEnabled": true,
+              "patreonText": "Check out the chronicler's notes",
+              "patreonEnabled": true,
+              "patreon": "https://www.patreon.com/posts/158344787"
             },
             {
               "id": "led",
