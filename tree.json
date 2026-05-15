@@ -126,13 +126,25 @@
               "id": "led",
               "label": "LED",
               "hover": "The Lair of the Evil Dragon",
-              "text": "Coming soon to a computer near you"
+              "text": "Coming soon to a computer near you",
+              "pdf": "pdf/LED.pdf",
+              "share": true,
+              "pdfEnabled": false,
+              "patreonText": "Check out the chronicler's notes",
+              "patreonEnabled": false,
+              "patreon": "https://www.patreon.com/posts/"
             },
             {
               "id": "ww",
               "label": "WW",
               "hover": "The Wailing Whale",
-              "text": "Coming soon to a computer near you"
+              "text": "Coming soon to a computer near you",
+              "pdf": "pdf/WW.pdf",
+              "share": true,
+              "pdfEnabled": true,
+              "patreonText": "Check out the chronicler's notes",
+              "patreonEnabled": false,
+              "patreon": "https://www.patreon.com/posts/"
             },
             {
               "id": "sbc",
