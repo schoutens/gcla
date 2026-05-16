@@ -143,7 +143,7 @@
               "share": true,
               "pdfEnabled": true,
               "patreonText": "Check out the chronicler's notes",
-              "patreonEnabled": false,
+              "patreonEnabled": true,
               "patreon": "https://www.patreon.com/posts/158435718"
             },
             {
