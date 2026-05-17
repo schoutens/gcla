@@ -235,42 +235,87 @@ function makeShareButtons(node) {
 
   return shareBox;
 }
-if (node.pdf && node.pdfEnabled !== false) {
+
+function renderLeaf(node, updateHash = true) {
+  currentView = "leaf";
+  currentNode = node;
+  app.innerHTML = "";
+  updateHeaderForNode(node);
+
   function isIOS() {
     return /iPhone|iPad|iPod/.test(navigator.userAgent)
       || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   }
 
-  if (isIOS()) {
-    const box = document.createElement("div");
-    box.className = "mobile-pdf-box";
+  if (node.pdf && node.pdfEnabled !== false) {
+    if (isIOS()) {
+      const box = document.createElement("div");
+      box.className = "mobile-pdf-box";
 
-    const msg = document.createElement("p");
-    msg.textContent = "For easier reading on iPhone/iPad, open the PDF in the native viewer.";
+      const msg = document.createElement("p");
+      msg.textContent = "For easier reading on iPhone/iPad, open the PDF in the native viewer.";
 
-    const openBtn = document.createElement("a");
-    openBtn.href = node.pdf;
-    openBtn.target = "_blank";
-    openBtn.rel = "noopener";
-    openBtn.className = "pdf-open-button";
-    openBtn.textContent = "Open PDF";
+      const openBtn = document.createElement("a");
+      openBtn.href = node.pdf;
+      openBtn.target = "_blank";
+      openBtn.rel = "noopener";
+      openBtn.className = "pdf-open-button";
+      openBtn.textContent = "Open PDF";
 
-    box.appendChild(msg);
-    box.appendChild(openBtn);
-    app.appendChild(box);
+      box.appendChild(msg);
+      box.appendChild(openBtn);
+      app.appendChild(box);
+    } else {
+      const container = document.createElement("div");
+      container.className = "pdf-container";
 
+      const iframe = document.createElement("iframe");
+      iframe.className = "pdf-frame";
+      iframe.src = node.pdf;
+
+      container.appendChild(iframe);
+      app.appendChild(container);
+    }
   } else {
-    const container = document.createElement("div");
-    container.className = "pdf-container";
+    const leaf = document.createElement("div");
+    leaf.className = "leaf-content";
+    leaf.textContent = node.text || node.hover || node.label;
 
-    const iframe = document.createElement("iframe");
-    iframe.className = "pdf-frame";
-    iframe.src = node.pdf;
+    app.appendChild(leaf);
+  }
 
-    container.appendChild(iframe);
-    app.appendChild(container);
+  if (node.patreon && node.patreonEnabled !== false) {
+    const box = document.createElement("div");
+    box.className = "patreon-box";
+
+    const text = document.createElement("div");
+    text.className = "patreon-text";
+    text.textContent = node.patreonText || "Continue into the commentary layer";
+
+    const link = document.createElement("a");
+    link.href = node.patreon;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.className = "patreon-button";
+    link.textContent = "Enter";
+
+    box.appendChild(text);
+    box.appendChild(link);
+    app.appendChild(box);
+  }
+
+  const shareButtons = makeShareButtons(node);
+  if (shareButtons) {
+    app.appendChild(shareButtons);
+  }
+
+  backButton.hidden = false;
+
+  if (updateHash) {
+    setHashForNode(node);
   }
 }
+
 // function renderLeaf(node, updateHash = true) {
 //   currentView = "leaf";
 //   currentNode = node;
@@ -304,38 +349,38 @@ if (node.pdf && node.pdfEnabled !== false) {
 //   }
 
   
-  if (node.patreon && node.patreonEnabled !== false) {
-    const box = document.createElement("div");
-    box.className = "patreon-box";
+//   if (node.patreon && node.patreonEnabled !== false) {
+//     const box = document.createElement("div");
+//     box.className = "patreon-box";
 
-    const text = document.createElement("div");
-    text.className = "patreon-text";
-    text.textContent = node.patreonText || "Continue into the commentary layer";
+//     const text = document.createElement("div");
+//     text.className = "patreon-text";
+//     text.textContent = node.patreonText || "Continue into the commentary layer";
 
-    const link = document.createElement("a");
-    link.href = node.patreon;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.className = "patreon-button";
-    link.textContent = "Enter";
+//     const link = document.createElement("a");
+//     link.href = node.patreon;
+//     link.target = "_blank";
+//     link.rel = "noopener noreferrer";
+//     link.className = "patreon-button";
+//     link.textContent = "Enter";
 
-    box.appendChild(text);
-    box.appendChild(link);
-    app.appendChild(box);
-  }
+//     box.appendChild(text);
+//     box.appendChild(link);
+//     app.appendChild(box);
+//   }
 
-  const shareButtons = makeShareButtons(node);
-  if (shareButtons) {
-    app.appendChild(shareButtons);
-  }
+//   const shareButtons = makeShareButtons(node);
+//   if (shareButtons) {
+//     app.appendChild(shareButtons);
+//   }
 
-  backButton.hidden = false;
+//   backButton.hidden = false;
 
-  if (updateHash) {
-    setHashForNode(node);
-  }
+//   if (updateHash) {
+//     setHashForNode(node);
+//   }
   
-
+// }
 
 function loadFromHash() {
   const hash = window.location.hash.replace(/^#/, "").trim();
