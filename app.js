@@ -235,38 +235,73 @@ function makeShareButtons(node) {
 
   return shareBox;
 }
+if (node.pdf && node.pdfEnabled !== false) {
+  function isIOS() {
+    return /iPhone|iPad|iPod/.test(navigator.userAgent)
+      || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  }
 
-function renderLeaf(node, updateHash = true) {
-  currentView = "leaf";
-  currentNode = node;
-  app.innerHTML = "";
-  updateHeaderForNode(node);
+  if (isIOS()) {
+    const box = document.createElement("div");
+    box.className = "mobile-pdf-box";
 
-  if (node.pdf && node.pdfEnabled !== false) {
+    const msg = document.createElement("p");
+    msg.textContent = "For easier reading on iPhone/iPad, open the PDF in the native viewer.";
+
+    const openBtn = document.createElement("a");
+    openBtn.href = node.pdf;
+    openBtn.target = "_blank";
+    openBtn.rel = "noopener";
+    openBtn.className = "pdf-open-button";
+    openBtn.textContent = "Open PDF";
+
+    box.appendChild(msg);
+    box.appendChild(openBtn);
+    app.appendChild(box);
+
+  } else {
     const container = document.createElement("div");
     container.className = "pdf-container";
 
     const iframe = document.createElement("iframe");
-    function isIOS() {
-    return /iPhone|iPad|iPod/.test(navigator.userAgent);
-    }
-
-    if (isIOS()) {
-        window.location.href = node.pdf;   // open full-screen
-    } else {
-        iframe.src = node.pdf;             // keep iframe for desktop
-    };
     iframe.className = "pdf-frame";
+    iframe.src = node.pdf;
 
     container.appendChild(iframe);
     app.appendChild(container);
-  } else {
-    const leaf = document.createElement("div");
-    leaf.className = "leaf-content";
-    leaf.textContent = node.text || node.hover || node.label;
-
-    app.appendChild(leaf);
   }
+}
+// function renderLeaf(node, updateHash = true) {
+//   currentView = "leaf";
+//   currentNode = node;
+//   app.innerHTML = "";
+//   updateHeaderForNode(node);
+
+//   if (node.pdf && node.pdfEnabled !== false) {
+//     const container = document.createElement("div");
+//     container.className = "pdf-container";
+
+//     const iframe = document.createElement("iframe");
+//     function isIOS() {
+//     return /iPhone|iPad|iPod/.test(navigator.userAgent);
+//     }
+
+//     if (isIOS()) {
+//         window.location.href = node.pdf;   // open full-screen
+//     } else {
+//         iframe.src = node.pdf;             // keep iframe for desktop
+//     };
+//     iframe.className = "pdf-frame";
+
+//     container.appendChild(iframe);
+//     app.appendChild(container);
+//   } else {
+//     const leaf = document.createElement("div");
+//     leaf.className = "leaf-content";
+//     leaf.textContent = node.text || node.hover || node.label;
+
+//     app.appendChild(leaf);
+//   }
 
   
   if (node.patreon && node.patreonEnabled !== false) {
