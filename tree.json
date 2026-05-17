@@ -129,10 +129,10 @@
               "text": "Coming soon to a computer near you",
               "pdf": "pdf/LED.pdf",
               "share": true,
-              "pdfEnabled": false,
+              "pdfEnabled": true,
               "patreonText": "Check out the chronicler's notes",
-              "patreonEnabled": false,
-              "patreon": "https://www.patreon.com/posts/"
+              "patreonEnabled": true,
+              "patreon": "https://www.patreon.com/posts/158513519"
             },
             {
               "id": "ww",
