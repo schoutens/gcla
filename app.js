@@ -335,7 +335,7 @@ if (node.pdf && node.pdfEnabled !== false) {
     setHashForNode(node);
   }
   
-}
+
 
 function loadFromHash() {
   const hash = window.location.hash.replace(/^#/, "").trim();
