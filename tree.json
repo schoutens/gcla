@@ -241,6 +241,12 @@
               "label": "P2O",
               "hover": "From Princess to Orphan",
               "text": "The story of a Lombard Princess becoming twice an orphan."
+        },
+        {
+              "id": "cd",
+              "label": "CD",
+              "hover": "The Call of Destiny",
+              "text": "The story of a Frankish girl becoming the confidante of Queens."
         }
       ]
     }
