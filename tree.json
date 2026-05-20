@@ -218,6 +218,31 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fut",
+      "label": "FUT",
+      "hover": "Future Projects",
+      "children":[
+        {
+              "id": "sd",
+              "label": "SD",
+              "hover": "The Ship in the Desert",
+              "text": "The story of a Mihran nobleman in search of the True God."
+        },
+        {
+              "id": "iu",
+              "label": "IU",
+              "hover": "The Involuntary Usurper",
+              "text": "The story of a Sasanian Prince used as a pawn in an international gambit."
+        },
+        {
+              "id": "p2o",
+              "label": "P2O",
+              "hover": "From Princess to Orphan",
+              "text": "The story of a Lombard Princess becoming twice an orphan."
+        }
+      ]
     }
   ]
 }
