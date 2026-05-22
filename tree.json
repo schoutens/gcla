@@ -190,6 +190,12 @@
           "hover": "A Gothic Tale",
           "children":[
             {
+              "id": "pro",
+              "label": "PRO",
+              "hover": "Prologue",
+              "text": "The letter aunt Peristera sent with her fabulous tale."
+            },
+            {
               "id": "md",
               "label": "Part I",
               "hover": "The Master of the Demons"
