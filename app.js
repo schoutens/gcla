@@ -16,6 +16,14 @@ function makeButton(node, onClick) {
   label.textContent = node.label;
   button.appendChild(label);
 
+  // NEW badge
+  if (hasNewDescendant(node)) {
+    const badge = document.createElement("span");
+    badge.className = "new-badge";
+    badge.textContent = "NEW";
+    button.appendChild(badge);
+  }
+
   button.addEventListener("mouseover", () => {
     label.textContent = node.hover || node.label;
   });
@@ -115,6 +123,12 @@ function updateHeaderForNode(node) {
   }
 
   header.classList.add(branchClass);
+}
+
+function hasNewDescendant(node) {
+  if (node.isNew) return true;
+  if (!node.children) return false;
+  return node.children.some(child => hasNewDescendant(child));
 }
 
 function renderHome(updateHash = true) {

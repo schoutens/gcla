@@ -196,7 +196,8 @@
               "text": "The letter aunt Peristera sent me with her fabulous tale.",
               "pdf": "pdf/Goth0.pdf",
               "share": false,
-              "pdfEnabled": true
+              "pdfEnabled": true,
+              "isNew": true
             },
             {
               "id": "md",
