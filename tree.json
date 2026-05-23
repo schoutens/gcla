@@ -108,7 +108,8 @@
               "share": true,
               "patreon": "https://www.patreon.com/posts/156882762",
               "patreonText": "Check out the chronicler's notes",
-              "patreonEnabled": true
+              "patreonEnabled": true,
+              "isNew": true
             },
             {
               "id": "ta",
@@ -197,7 +198,7 @@
               "pdf": "pdf/Goth0.pdf",
               "share": false,
               "pdfEnabled": true,
-              "isNew": true
+              "isNew": false
             },
             {
               "id": "md",
