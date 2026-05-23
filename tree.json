@@ -193,32 +193,50 @@
               "id": "pro",
               "label": "PRO",
               "hover": "Prologue",
-              "text": "The letter aunt Peristera sent with her fabulous tale."
+              "text": "The letter aunt Peristera sent me with her fabulous tale.",
+              "pdf": "pdf/Goth0.pdf",
+              "share": false,
+              "pdfEnabled": true
             },
             {
               "id": "md",
               "label": "Part I",
-              "hover": "The Master of the Demons"
+              "hover": "The Master of the Demons",
+              "pdf": "pdf/GothI.pdf",
+              "share": false,
+              "pdfEnabled": true
             },
             {
               "id": "ap",
               "label": "Part II",
-              "hover": "The Arian Princess"
+              "hover": "The Arian Princess",
+              "pdf": "pdf/GothII.pdf",
+              "share": false,
+              "pdfEnabled": true
             },
             {
               "id": "hc",
               "label": "Part III",
-              "hover": "The Hunnic Curse"
+              "hover": "The Hunnic Curse",
+              "pdf": "pdf/GothIII.pdf",
+              "share": false,
+              "pdfEnabled": true
             },
             {
               "id": "qp",
               "label": "Part IV",
-              "hover": "The Queen's Potion"
+              "hover": "The Queen's Potion",
+              "pdf": "pdf/GothIV.pdf",
+              "share": false,
+              "pdfEnabled": true
             },
             {
               "id": "cr",
               "label": "Part V",
-              "hover": "The Castle of Remembrance"
+              "hover": "The Castle of Remembrance",
+              "pdf": "pdf/GothV.pdf",
+              "share": false,
+              "pdfEnabled": true
             }
 
           ]
