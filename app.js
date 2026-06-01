@@ -11,6 +11,11 @@ function makeButton(node, onClick) {
   const button = document.createElement("div");
   button.className = "big-button";
 
+  const sigil = document.createElement("div");
+  sigil.className = "button-sigil";
+  sigil.textContent = node.sigil || "✧";
+  button.appendChild(sigil);
+
   const label = document.createElement("span");
   label.className = "button-label";
   label.textContent = node.label;
