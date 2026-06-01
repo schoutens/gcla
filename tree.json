@@ -115,6 +115,7 @@
               "id": "ta",
               "label": "TA",
               "hover": "The Tower of Arrogance",
+              "sigil": "◈",
               "text": "Coming soon to a computer near you",
               "pdf": "pdf/TA.pdf",
               "share": true,
