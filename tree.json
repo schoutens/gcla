@@ -2,6 +2,7 @@
   "id": "gcla",
   "label": "GCLA",
   "hover": "Grand Chronicle of Late Antiquity",
+  "icon": "images/gcla-header.png",
   "children": [
     {
       "id": "h2r",
@@ -87,6 +88,7 @@
       "id": "elb",
       "label": "ELB",
       "hover": "Ex Libris Boranis",
+      "icon": "images/ELB.png",
       "children": [
         {
           "id": "vt",
