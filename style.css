@@ -75,127 +75,191 @@ body {
 }
 
 .button-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
-  justify-content: center;
-  align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .big-button {
-  position: relative;
+    position: relative;
 
-  width: 320px;
-  min-height: 140px;
+    width: 320px;
+    min-height: 140px;
 
-  margin: 24px auto;
-  padding: 28px;
+    margin: 24px auto;
+    padding: 28px;
 
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.05),
-      rgba(0,0,0,0.08)
-    ),
-    #a89b84;
+    /*
+       Parchment-button treatment:
+       same family as the black-silhouette medallions, without requiring
+       a separate texture image file.
+    */
+    background-color: #c6b894;
+    background-image:
+        radial-gradient(circle at 28% 22%, rgba(255,255,255,0.16), transparent 34%),
+        radial-gradient(circle at 78% 82%, rgba(70,52,34,0.18), transparent 38%),
+        radial-gradient(circle at 50% 50%, rgba(40,30,20,0.055) 0.8px, transparent 0.9px),
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.06),
+            rgba(30,22,14,0.10)
+        );
+    background-size:
+        auto,
+        auto,
+        7px 7px,
+        auto;
 
-  color: #111;
+    color: #1c1711;
 
-    border: 1px solid rgba(60,40,20,0.35);
+    border: 2px solid rgba(28, 22, 15, 0.78);
 
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.08),
-    0 2px 6px rgba(0,0,0,0.15);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.10),
+        0 2px 5px rgba(0,0,0,0.20);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
 
-  text-align: center;
+    text-align: center;
 
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        filter 0.22s ease,
+        border-color 0.22s ease;
 
-  overflow: visible;
+    overflow: visible;
 
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .big-button:hover {
-    background: linear-gradient(to bottom, #565656 0%, #2a2a2a 100%);
-    color: #fff;
+    /*
+       Keep the hover in the same parchment world.
+       This avoids the old modern grey/black hover.
+    */
+    background-color: #d0c09b;
+    background-image:
+        radial-gradient(circle at 28% 22%, rgba(255,255,255,0.18), transparent 34%),
+        radial-gradient(circle at 78% 82%, rgba(70,52,34,0.16), transparent 38%),
+        radial-gradient(circle at 50% 50%, rgba(40,30,20,0.06) 0.8px, transparent 0.9px),
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.08),
+            rgba(30,22,14,0.08)
+        );
+    background-size:
+        auto,
+        auto,
+        7px 7px,
+        auto;
+
+    color: #15110d;
     transform: translateY(-2px);
+    filter: brightness(1.03);
+
+    border-color: rgba(20, 15, 10, 0.88);
+
     box-shadow:
-        0 5px 0 #111,
-        0 12px 22px rgba(0, 0, 0, 0.45),
-        inset 0 1px 0 rgba(255, 255, 255, 0.18),
-        inset 0 -2px 4px rgba(0, 0, 0, 0.28);
+        inset 0 0 0 1px rgba(255,255,255,0.13),
+        0 5px 10px rgba(0,0,0,0.24);
 }
 
 .big-button:active {
-    transform: translateY(2px);
+    transform: translateY(1px);
+    filter: brightness(0.97);
+
     box-shadow:
-        0 1px 0 #111,
-        0 4px 8px rgba(0, 0, 0, 0.32),
-        inset 0 2px 5px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid #111;
+        inset 0 2px 5px rgba(0,0,0,0.22),
+        0 1px 3px rgba(0,0,0,0.22);
+
+    border-color: rgba(18, 13, 9, 0.9);
 }
 
 .big-button::before,
 .big-button::after {
-  content: "";
+    content: "";
 
-  position: absolute;
+    position: absolute;
 
-  width: 32px;
-  height: 32px;
+    width: 32px;
+    height: 32px;
 
-  border-color: #444;
-  border-style: solid;
+    border-color: rgba(31, 24, 17, 0.72);
+    border-style: solid;
 
-  opacity: 0.55;
+    opacity: 0.62;
+    pointer-events: none;
 }
-.big-button::before {
-  top: 10px;
-  left: 10px;
 
-  border-width: 2px 0 0 2px;
+.big-button::before {
+    top: 10px;
+    left: 10px;
+
+    border-width: 2px 0 0 2px;
 }
 
 .big-button::after {
-  bottom: 10px;
-  right: 10px;
+    bottom: 10px;
+    right: 10px;
 
-  border-width: 0 2px 2px 0;
+    border-width: 0 2px 2px 0;
 }
+
 .button-label {
-  font-family: "Cormorant Garamond", serif;
+    position: relative;
+    z-index: 1;
 
-  font-size: 2rem;
-  font-weight: 500;
+    display: block;
+    width: 100%;
+    text-align: center;
 
-  letter-spacing: 0.04em;
+    font-family: "Cormorant Garamond", serif;
 
-  line-height: 1.1;
+    font-size: 2rem;
+    font-weight: 500;
+
+    letter-spacing: 0.04em;
+
+    line-height: 1.25;
+    word-break: break-word;
 }
 
+.button-sigil {
+    position: relative;
+    z-index: 1;
+
+    font-family: "Cinzel", serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    opacity: 0.78;
+    letter-spacing: 0.12em;
+
+    color: #201911;
+    mix-blend-mode: multiply;
+}
 
 .new-badge {
-  position: absolute;
-  top: -8px;
-  right: -12px;
-  background: #b30000;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 3px 7px;
-  border-radius: 4px;
-  transform: rotate(18deg);
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-  white-space: nowrap;
-  
+    position: absolute;
+    z-index: 3;
+    top: -8px;
+    right: -12px;
+    background: #b30000;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 4px;
+    transform: rotate(18deg);
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    white-space: nowrap;
 }
 
 .single-button {
@@ -211,6 +275,7 @@ body {
     text-align: center;
     margin: 0 auto;
 }
+
 .pdf-container {
     width: min(1000px, 92vw);
     height: 82vh;
@@ -235,6 +300,7 @@ body {
     border-radius: 9px;
     background: #111;
 }
+
 .site-footer {
     width: 100%;
     text-align: center;
@@ -248,6 +314,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
 }
+
 #site-header {
     position: relative;
     width: 100%;
@@ -322,6 +389,7 @@ body {
         font-size: 18px;
     }
 }
+
 .branch-gcla {
     filter: none;
 }
@@ -337,6 +405,7 @@ body {
 .branch-elb {
     filter: hue-rotate(18deg) saturate(0.95);
 }
+
 #site-header::after {
     content: "";
     position: absolute;
@@ -361,15 +430,6 @@ body {
     50%  { transform: translateX(10%); opacity: 0.28; }
     100% { transform: translateX(-35%); opacity: 0.15; }
 }
-.button-label {
-    display: block;
-    width: 100%;
-    text-align: center;
-    line-height: 1.25;
-    word-break: break-word;
-}
-
-
 
 .patreon-text {
     font-size: 14px;
@@ -389,8 +449,6 @@ body {
     white-space: nowrap;
 }
 
-
-
 .share-button {
     display: inline-block;
     appearance: none;
@@ -408,6 +466,7 @@ body {
     cursor: pointer;
     white-space: nowrap;
 }
+
 .patreon-box {
     width: min(900px, 88vw);
     margin: 24px auto 14px;
@@ -422,6 +481,7 @@ body {
     position: relative;
     z-index: 5;
 }
+
 .share-box {
     width: min(900px, 88vw);
     margin: 0 auto 28px;
@@ -434,110 +494,89 @@ body {
     position: relative;
     z-index: 5;
 }
+
 .mobile-pdf-box {
-  max-width: 700px;
-  margin: 120px auto 40px;
-  padding: 28px;
-  text-align: center;
-  color: #ddd;
-  font-family: Georgia, serif;
+    max-width: 700px;
+    margin: 120px auto 40px;
+    padding: 28px;
+    text-align: center;
+    color: #ddd;
+    font-family: Georgia, serif;
 }
 
 .pdf-open-button {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 14px 24px;
-  border: 1px solid #aaa;
-  color: #eee;
-  background: #222;
-  text-decoration: none;
-  font-size: 18px;
-  cursor: pointer;
+    display: inline-block;
+    margin-top: 18px;
+    padding: 14px 24px;
+    border: 1px solid #aaa;
+    color: #eee;
+    background: #222;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .pdf-open-button:hover {
-  background: #eee;
-  color: #111;
+    background: #eee;
+    color: #111;
 }
 
-.big-button {
-  flex-direction: column;
-  gap: 12px;
-}
-
-.button-sigil {
-  font-family: "Cinzel", serif;
-  font-size: 1.8rem;
-  line-height: 1;
-  opacity: 0.75;
-  letter-spacing: 0.12em;
-}
-
-.button-label {
-  display: block;
-}
 .button-icon {
-  max-width: 140px;
-  max-height: 90px;
+    position: relative;
+    z-index: 1;
 
-  object-fit: contain;
+    max-width: 150px;
+    max-height: 90px;
 
-  opacity: 0.88;
+    object-fit: contain;
 
-  filter:
-    grayscale(100%)
-    contrast(115%);
+    opacity: 0.93;
+
+    filter:
+        grayscale(100%)
+        contrast(108%)
+        saturate(80%);
+
+    mix-blend-mode: multiply;
+
+    pointer-events: none;
 }
 
 .button-content {
-  position: relative;
+    position: relative;
+    z-index: 1;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  width: 100%;
-  min-height: 90px;
+    width: 100%;
+    min-height: 90px;
 }
 
 .button-default-view,
 .button-hover-view {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  width: 100%;
+    width: 100%;
 
-  transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 .button-hover-view {
-  position: absolute;
-  inset: 0;
+    position: absolute;
+    inset: 0;
 
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .big-button:hover .button-default-view {
-  opacity: 0;
+    opacity: 0;
 }
 
 .big-button:hover .button-hover-view {
-  opacity: 1;
-}
-
-.button-icon {
-  max-width: 150px;
-  max-height: 90px;
-
-  object-fit: contain;
-
-  opacity: 0.9;
-
-  filter:
-    grayscale(100%)
-    contrast(115%);
-
-  pointer-events: none;
+    opacity: 1;
 }
