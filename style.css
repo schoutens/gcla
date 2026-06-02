@@ -93,16 +93,19 @@ body {
 
   background:
     linear-gradient(
-      rgba(255,255,255,0.96),
-      rgba(245,245,240,0.96)
-    );
+      to bottom,
+      rgba(255,255,255,0.05),
+      rgba(0,0,0,0.08)
+    ),
+    #a89b84;
 
   color: #111;
 
-  border: 1px solid #222;
+    border: 1px solid rgba(60,40,20,0.35);
 
   box-shadow:
-    0 8px 24px rgba(0,0,0,0.35);
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 2px 6px rgba(0,0,0,0.15);
 
   display: flex;
   align-items: center;
