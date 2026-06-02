@@ -190,12 +190,12 @@ body {
 
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 2rem;
+    font-size: 1.72rem;
     font-weight: 500;
 
-    letter-spacing: 0.04em;
+    letter-spacing: 0.015em;
 
-    line-height: 1.25;
+    line-height: 1.12;
     word-break: break-word;
 }
 
@@ -207,7 +207,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    min-width: 54px;
+    min-width: 44px;
 
     font-family: "Cinzel", serif;
     font-size: 2rem;
