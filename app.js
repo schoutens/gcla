@@ -17,6 +17,16 @@ function makeButton(node, onClick) {
   sigil.textContent = node.sigil || "✧";
   button.appendChild(sigil);
 
+  const sigilLeft = document.createElement("div");
+sigilLeft.className = "button-sigil left";
+sigilLeft.textContent = node.sigil || "✧";
+button.appendChild(sigilLeft);
+
+const sigilRight = document.createElement("div");
+sigilRight.className = "button-sigil right";
+sigilRight.textContent = node.sigil || "✧";
+button.appendChild(sigilRight);
+
   const content = document.createElement("div");
   content.className = "button-content";
 

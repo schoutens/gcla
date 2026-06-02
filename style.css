@@ -110,7 +110,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
+    flex-direction: row;
+    gap: 18px;
   text-align: center;
 
   transition:
@@ -202,14 +203,37 @@ body {
     position: relative;
     z-index: 1;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 54px;
+
     font-family: "Cinzel", serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1;
-    opacity: 0.78;
+
+    opacity: 0.82;
     letter-spacing: 0.12em;
 
-    color: #201911;
+    color: #1e1a16;
+
     mix-blend-mode: multiply;
+
+    filter:
+        contrast(105%)
+        saturate(80%);
+
+    pointer-events: none;
+
+    flex-shrink: 0;
+}
+.button-sigil.left {
+    margin-right: 6px;
+}
+
+.button-sigil.right {
+    margin-left: 6px;
 }
 
 .new-badge {

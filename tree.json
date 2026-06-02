@@ -132,6 +132,7 @@
               "label": "LED",
               "hover": "The Lair of the Evil Dragon",
               "text": "Coming soon to a computer near you",
+              "icon": "images/VTled.png",
               "pdf": "pdf/LED.pdf",
               "share": true,
               "pdfEnabled": true,
