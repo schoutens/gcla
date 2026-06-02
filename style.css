@@ -473,3 +473,15 @@ body {
 .button-label {
   display: block;
 }
+.button-icon {
+  max-width: 140px;
+  max-height: 90px;
+
+  object-fit: contain;
+
+  opacity: 0.88;
+
+  filter:
+    grayscale(100%)
+    contrast(115%);
+}

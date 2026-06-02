@@ -7,19 +7,53 @@ let historyStack = [];
 let currentView = "home";
 let currentNode = null;
 
+
 function makeButton(node, onClick) {
   const button = document.createElement("div");
   button.className = "big-button";
 
-  const sigil = document.createElement("div");
-  sigil.className = "button-sigil";
-  sigil.textContent = node.sigil || "✧";
-  button.appendChild(sigil);
+  // optional sigil/topline
+  if (node.sigil || !node.icon) {
+    const sigil = document.createElement("div");
+    sigil.className = "button-sigil";
+    sigil.textContent = node.sigil || "✧";
+    button.appendChild(sigil);
+  }
 
-  const label = document.createElement("span");
-  label.className = "button-label";
-  label.textContent = node.label;
-  button.appendChild(label);
+  // main content area
+  const content = document.createElement("div");
+  content.className = "button-content";
+
+  function renderDefault() {
+    content.innerHTML = "";
+
+    if (node.icon) {
+      const img = document.createElement("img");
+      img.src = node.icon;
+      img.className = "button-icon";
+      img.alt = node.label || "";
+      content.appendChild(img);
+    } else {
+      const label = document.createElement("span");
+      label.className = "button-label";
+      label.textContent = node.label;
+      content.appendChild(label);
+    }
+  }
+
+  function renderHover() {
+    content.innerHTML = "";
+
+    const hoverLabel = document.createElement("span");
+    hoverLabel.className = "button-label";
+    hoverLabel.textContent = node.hover || node.label;
+
+    content.appendChild(hoverLabel);
+  }
+
+  renderDefault();
+
+  button.appendChild(content);
 
   // NEW badge
   if (hasNewDescendant(node)) {
@@ -29,18 +63,15 @@ function makeButton(node, onClick) {
     button.appendChild(badge);
   }
 
-  button.addEventListener("mouseover", () => {
-    label.textContent = node.hover || node.label;
-  });
+  button.addEventListener("mouseover", renderHover);
 
-  button.addEventListener("mouseout", () => {
-    label.textContent = node.label;
-  });
+  button.addEventListener("mouseout", renderDefault);
 
   button.addEventListener("click", onClick);
 
   return button;
 }
+
 
 function getPath(node, targetId, path = []) {
   const newPath = [...path, node];
