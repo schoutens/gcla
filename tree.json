@@ -7,6 +7,7 @@
     {
       "id": "h2r",
       "label": "H2R",
+      "icon": "images/H2R.png",
       "hover": "Hero to Rebel",
       "children":[
         {
@@ -69,6 +70,7 @@
     {
       "id": "o2p",
       "label": "O2P",
+      "icon": "images/O2P.png",
       "hover": "Orphan to Princess",
       "children":[
         {
