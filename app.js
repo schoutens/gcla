@@ -12,47 +12,40 @@ function makeButton(node, onClick) {
   const button = document.createElement("div");
   button.className = "big-button";
 
-  // optional sigil/topline
-  if (node.sigil || !node.icon) {
-    const sigil = document.createElement("div");
-    sigil.className = "button-sigil";
-    sigil.textContent = node.sigil || "✧";
-    button.appendChild(sigil);
-  }
+  const sigil = document.createElement("div");
+  sigil.className = "button-sigil";
+  sigil.textContent = node.sigil || "✧";
+  button.appendChild(sigil);
 
-  // main content area
   const content = document.createElement("div");
   content.className = "button-content";
 
-  function renderDefault() {
-    content.innerHTML = "";
+  const defaultView = document.createElement("div");
+  defaultView.className = "button-default-view";
 
-    if (node.icon) {
-      const img = document.createElement("img");
-      img.src = node.icon;
-      img.className = "button-icon";
-      img.alt = node.label || "";
-      content.appendChild(img);
-    } else {
-      const label = document.createElement("span");
-      label.className = "button-label";
-      label.textContent = node.label;
-      content.appendChild(label);
-    }
+  if (node.icon) {
+    const img = document.createElement("img");
+    img.src = node.icon;
+    img.className = "button-icon";
+    img.alt = node.label || node.hover || "";
+    defaultView.appendChild(img);
+  } else {
+    const label = document.createElement("span");
+    label.className = "button-label";
+    label.textContent = node.label;
+    defaultView.appendChild(label);
   }
 
-  function renderHover() {
-    content.innerHTML = "";
+  const hoverView = document.createElement("div");
+  hoverView.className = "button-hover-view";
 
-    const hoverLabel = document.createElement("span");
-    hoverLabel.className = "button-label";
-    hoverLabel.textContent = node.hover || node.label;
+  const hoverLabel = document.createElement("span");
+  hoverLabel.className = "button-label";
+  hoverLabel.textContent = node.hover || node.label;
+  hoverView.appendChild(hoverLabel);
 
-    content.appendChild(hoverLabel);
-  }
-
-  renderDefault();
-
+  content.appendChild(defaultView);
+  content.appendChild(hoverView);
   button.appendChild(content);
 
   // NEW badge
@@ -62,10 +55,6 @@ function makeButton(node, onClick) {
     badge.textContent = "NEW";
     button.appendChild(badge);
   }
-
-  button.addEventListener("mouseover", renderHover);
-
-  button.addEventListener("mouseout", renderDefault);
 
   button.addEventListener("click", onClick);
 

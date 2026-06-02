@@ -485,3 +485,56 @@ body {
     grayscale(100%)
     contrast(115%);
 }
+
+.button-content {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 90px;
+}
+
+.button-default-view,
+.button-hover-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  transition: opacity 0.2s ease;
+}
+
+.button-hover-view {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.big-button:hover .button-default-view {
+  opacity: 0;
+}
+
+.big-button:hover .button-hover-view {
+  opacity: 1;
+}
+
+.button-icon {
+  max-width: 150px;
+  max-height: 90px;
+
+  object-fit: contain;
+
+  opacity: 0.9;
+
+  filter:
+    grayscale(100%)
+    contrast(115%);
+
+  pointer-events: none;
+}
