@@ -83,92 +83,59 @@ body {
 }
 
 .big-button {
-    position: relative;
+  position: relative;
 
-    width: 320px;
-    min-height: 140px;
+  width: 320px;
+  min-height: 140px;
 
-    margin: 24px auto;
-    padding: 28px;
+  margin: 24px auto;
+  padding: 28px;
 
-    /*
-       Parchment-button treatment:
-       same family as the black-silhouette medallions, without requiring
-       a separate texture image file.
-    */
-    background-color: #c6b894;
-    background-image:
-        radial-gradient(circle at 28% 22%, rgba(255,255,255,0.16), transparent 34%),
-        radial-gradient(circle at 78% 82%, rgba(70,52,34,0.18), transparent 38%),
-        radial-gradient(circle at 50% 50%, rgba(40,30,20,0.055) 0.8px, transparent 0.9px),
-        linear-gradient(
-            to bottom,
-            rgba(255,255,255,0.06),
-            rgba(30,22,14,0.10)
-        );
-    background-size:
-        auto,
-        auto,
-        7px 7px,
-        auto;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.035),
+      rgba(0,0,0,0.045)
+    ),
+    #d7cfbf;
 
-    color: #1c1711;
+  color: #1c1814;
 
-    border: 2px solid rgba(28, 22, 15, 0.78);
+  border: 1px solid rgba(28,22,16,0.55);
 
-    box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,0.10),
-        0 2px 5px rgba(0,0,0,0.20);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.05),
+    0 2px 5px rgba(0,0,0,0.12);
 
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    text-align: center;
+  text-align: center;
 
-    transition:
-        transform 0.22s ease,
-        box-shadow 0.22s ease,
-        filter 0.22s ease,
-        border-color 0.22s ease;
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease;
 
-    overflow: visible;
-
-    cursor: pointer;
+  overflow: visible;
+  cursor: pointer;
 }
 
 .big-button:hover {
-    /*
-       Keep the hover in the same parchment world.
-       This avoids the old modern grey/black hover.
-    */
-    background-color: #d0c09b;
-    background-image:
-        radial-gradient(circle at 28% 22%, rgba(255,255,255,0.18), transparent 34%),
-        radial-gradient(circle at 78% 82%, rgba(70,52,34,0.16), transparent 38%),
-        radial-gradient(circle at 50% 50%, rgba(40,30,20,0.06) 0.8px, transparent 0.9px),
-        linear-gradient(
-            to bottom,
-            rgba(255,255,255,0.08),
-            rgba(30,22,14,0.08)
-        );
-    background-size:
-        auto,
-        auto,
-        7px 7px,
-        auto;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.05),
+      rgba(0,0,0,0.06)
+    ),
+    #d1c8b7;
 
-    color: #15110d;
-    transform: translateY(-2px);
-    filter: brightness(1.03);
+  color: #111;
 
-    border-color: rgba(20, 15, 10, 0.88);
+  transform: translateY(-2px);
 
-    box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,0.13),
-        0 5px 10px rgba(0,0,0,0.24);
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.16);
 }
 
 .big-button:active {
@@ -191,7 +158,7 @@ body {
     width: 32px;
     height: 32px;
 
-    border-color: rgba(31, 24, 17, 0.72);
+    border-color: rgba(40,32,24,0.55);
     border-style: solid;
 
     opacity: 0.62;
