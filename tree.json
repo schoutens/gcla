@@ -96,6 +96,7 @@
             {
               "id": "int",
               "label": "INTRO",
+              "icon": "images/VTintro.png",
               "hover": "Introduction",
               "pdf": "pdf/VTIntro.pdf",
               "share": true
@@ -104,7 +105,7 @@
               "id": "3ps",
               "label": "3PS",
               "hover": "The Three Princes of Serendipity",
-              "icon": "images/3ps.png",
+              "icon": "images/VT3ps.png",
               "pdf": "pdf/3PS.pdf",
               "share": true,
               "patreon": "https://www.patreon.com/posts/156882762",
@@ -117,7 +118,7 @@
               "label": "TA",
               "hover": "The Tower of Arrogance",
            
-              "icon": "images/ta.png",
+              "icon": "images/VTta.png",
               "text": "Coming soon to a computer near you",
               "pdf": "pdf/TA.pdf",
               "share": true,
