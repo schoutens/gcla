@@ -12,20 +12,10 @@ function makeButton(node, onClick) {
   const button = document.createElement("div");
   button.className = "big-button";
 
-  const sigil = document.createElement("div");
-  sigil.className = "button-sigil";
-  sigil.textContent = node.sigil || "✧";
-  button.appendChild(sigil);
-
   const sigilLeft = document.createElement("div");
-sigilLeft.className = "button-sigil left";
-sigilLeft.textContent = node.sigil || "✧";
-button.appendChild(sigilLeft);
-
-const sigilRight = document.createElement("div");
-sigilRight.className = "button-sigil right";
-sigilRight.textContent = node.sigil || "✧";
-button.appendChild(sigilRight);
+  sigilLeft.className = "button-sigil left";
+  sigilLeft.textContent = node.sigil || "✧";
+  button.appendChild(sigilLeft);
 
   const content = document.createElement("div");
   content.className = "button-content";
@@ -57,6 +47,11 @@ button.appendChild(sigilRight);
   content.appendChild(defaultView);
   content.appendChild(hoverView);
   button.appendChild(content);
+
+  const sigilRight = document.createElement("div");
+  sigilRight.className = "button-sigil right";
+  sigilRight.textContent = node.sigil || "✧";
+  button.appendChild(sigilRight);
 
   // NEW badge
   if (hasNewDescendant(node)) {
