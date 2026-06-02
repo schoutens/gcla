@@ -23,18 +23,25 @@ function makeButton(node, onClick) {
   const defaultView = document.createElement("div");
   defaultView.className = "button-default-view";
 
-  if (node.icon) {
-    const img = document.createElement("img");
-    img.src = node.icon;
-    img.className = "button-icon";
-    img.alt = node.label || node.hover || "";
-    defaultView.appendChild(img);
-  } else {
-    const label = document.createElement("span");
-    label.className = "button-label";
-    label.textContent = node.label;
-    defaultView.appendChild(label);
-  }
+ if (node.icon) {
+  const img = document.createElement("img");
+  img.src = node.icon;
+  img.className = "button-icon";
+  img.alt = node.label || node.hover || "";
+  defaultView.appendChild(img);
+
+  // floating enlarged sigil
+  const pop = document.createElement("div");
+  pop.className = "sigil-pop";
+  pop.style.backgroundImage = `url(${node.icon})`;
+  button.appendChild(pop);
+
+} else {
+  const label = document.createElement("span");
+  label.className = "button-label";
+  label.textContent = node.label;
+  defaultView.appendChild(label);
+}
 
   const hoverView = document.createElement("div");
   hoverView.className = "button-hover-view";

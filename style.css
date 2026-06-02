@@ -571,3 +571,26 @@ body {
 .big-button:hover .button-hover-view {
     opacity: 1;
 }
+
+.big-button .sigil-pop {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-image: var(--sigil-image);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: scale(0.85);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  top: -210px;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 20;
+}
+
+.big-button:hover .sigil-pop {
+  opacity: 1;
+  transform: scale(1);
+}
