@@ -91,6 +91,7 @@
         {
           "id": "vt",
           "label": "VT",
+           "icon": "images/VT.png",
           "hover": "The Storybook of Varaztirots the Armenian",
           "children": [
             {
@@ -145,6 +146,7 @@
               "id": "ww",
               "label": "WW",
               "hover": "The Wailing Whale",
+               "icon": "images/VTww.png",
               "text": "Coming soon to a computer near you",
               "pdf": "pdf/WW.pdf",
               "share": true,
