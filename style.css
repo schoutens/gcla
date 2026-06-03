@@ -591,7 +591,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 
-  opacity: 0.96;
+  opacity: 0;
   transform: translateX(-8px) scale(0.92);
   transform-origin: left center;
   pointer-events: none;
@@ -603,10 +603,10 @@ body {
   top: -58px;
   left: 68%;
 
-  z-index: 31;
+  z-index: 29;
 }
 
 .big-button:hover .sigil-pop {
-  opacity: 1;
+  opacity: 0.96;
   transform: translateX(0) scale(1);
 }
