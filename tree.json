@@ -13,11 +13,13 @@
         {
               "id": "b",
               "label": "B",
+              "icon": "images/H2RB.png",
               "hover": "The Cycle of Wahram Chobin",
               "children":[
                           {
                                 "id": "b1",
                                 "label": "Book 1",
+                                "icon": "pdf/H2RB1.pdf",
                                 "hover": "Chobin",
                                 "pdf": "pdf/H2RB1.pdf"
                           },
@@ -36,6 +38,7 @@
         {
               "id": "v",
               "label": "V",
+              "icon": "images/H2RV.png",
               "hover": "The Cycle of Wistahm Spahbedan",
               "children":[
                           {
@@ -58,11 +61,13 @@
         {
               "id": "s",
               "label": "S",
+              "icon": "images/H2RS.png",
               "hover": "The Cycle of Pirag Shahrwaraz"
         },
         {
               "id": "f",
               "label": "F",
+              "icon": "images/H2RF.png",
               "hover": "The Cycle of Farrokhzad Bav"
         }
       ]
@@ -83,6 +88,7 @@
         {
               "id": "qg",
               "label": "QG",
+               "icon": "images/O2P2.png",
               "hover": "The Queens' Gambit"
         }
       ]
@@ -201,6 +207,7 @@
         {
           "id": "gt",
           "label": "GT",
+           "icon": "images/GT.png",
           "hover": "A Gothic Tale",
           "children":[
             {
