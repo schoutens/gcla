@@ -31,7 +31,7 @@
                           {
                                 "id": "b3",
                                 "label": "Book 3",
-                                "hover": "Khwarrahormand"
+                                "hover": "Khwarrah-hormand"
                           }
                           ]
         },
@@ -147,11 +147,11 @@
               "icon": "images/VTled.png",
               "pdf": "pdf/LED.pdf",
               "share": true,
-              "pdfEnabled": true,
+              "pdfEnabled": false,
               "patreonText": "Check out the chronicler's notes",
               "patreonEnabled": true,
               "patreon": "https://www.patreon.com/posts/158513519",
-              "isNew": true
+              "isNew": false
             },
             {
               "id": "ww",
@@ -170,11 +170,13 @@
               "id": "sbc",
               "label": "SBC",
               "hover": "The Silver Book of Cantations",
+               "icon": "images/VTsbc.png",
               "text": "Coming soon to a computer near you"
             },
             {
               "id": "3dh",
               "label": "3DH",
+               "icon": "images/VT3dh.png",
               "hover": "The Three Devs of Hrom",
               "text": "Coming soon to a computer near you"
             },
