@@ -81,7 +81,7 @@
         {
               "id": "r2p",
               "label": "R2P",
-               "icon": "pdf/O2P1.pdf",
+              "icon": "images/O2P1.png",
               "hover": "All Roads Lead to Persia",
               "pdf": "pdf/O2P1.pdf"
         },
@@ -190,6 +190,7 @@
             {
               "id": "fg",
               "label": "FG",
+              "icon": "images/VTfg.png",
               "hover": "The Forgotten God",
               "text": "Coming soon to a computer near you"
             },
