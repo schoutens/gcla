@@ -12,6 +12,10 @@ function makeButton(node, onClick) {
   const button = document.createElement("div");
   button.className = "big-button";
 
+  if (node.pdf && node.pdfEnabled !== false) {
+    button.classList.add("pdf-available");
+  }
+
   const sigilLeft = document.createElement("div");
   sigilLeft.className = "button-sigil left";
   sigilLeft.textContent = node.sigil || "✧";
