@@ -604,31 +604,30 @@ body {
   z-index: 31;
 }
 
-.big-button:hover .sigil-pop {
-  opacity: 1;
-  transform: scale(1);
-}
-.popup {
+.big-button .sigil-pop {
   position: absolute;
-  left: 72%;
-  top: -8px;
-
-  transform:
-    translateX(-6px)
-    scale(0.97);
+  width: 180px;
+  height: 180px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
   opacity: 0;
+  transform: translateX(-8px) scale(0.92);
+  transform-origin: left center;
+  pointer-events: none;
 
   transition:
-    opacity 160ms ease,
-    transform 160ms ease;
+    opacity 0.18s ease,
+    transform 0.18s ease;
 
-  pointer-events: none;
+  top: -28px;
+  left: 68%;
+
+  z-index: 31;
 }
-.big-button:hover .popup {
-  opacity: 1;
 
-  transform:
-    translateX(0)
-    scale(1);
+.big-button:hover .sigil-pop {
+  opacity: 1;
+  transform: translateX(0) scale(1);
 }
