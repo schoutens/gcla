@@ -184,6 +184,7 @@
               "id": "hws",
               "label": "HWS",
               "hover": "A Holy Wood Story",
+               "icon": "images/VThws.png",
               "text": "Coming soon to a computer near you"
             },
             {
@@ -195,13 +196,22 @@
             {
               "id": "dsl",
               "label": "DSL",
+               "icon": "images/VTdsl.png",
               "hover": "The Den of the Square Lion",
               "text": "Coming soon to a computer near you"
             },
             {
               "id": "sgi",
               "label": "SGI",
+               "icon": "images/VTsgi.png",
               "hover": "The Statue of the God Incarnate",
+              "text": "Coming soon to a computer near you"
+            },
+            {
+              "id": "ee",
+              "label": "EE",
+               "icon": "images/VTee.png",
+              "hover": "The Equestrian Ewe and the Shorn Stallion",
               "text": "Coming soon to a computer near you"
             }
           ]
