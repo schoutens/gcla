@@ -608,3 +608,27 @@ body {
   opacity: 1;
   transform: scale(1);
 }
+.popup {
+  position: absolute;
+  left: 72%;
+  top: -8px;
+
+  transform:
+    translateX(-6px)
+    scale(0.97);
+
+  opacity: 0;
+
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+
+  pointer-events: none;
+}
+.big-button:hover .popup {
+  opacity: 1;
+
+  transform:
+    translateX(0)
+    scale(1);
+}
