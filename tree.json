@@ -236,6 +236,7 @@
             {
               "id": "md",
               "label": "Part I",
+              "icon": "images/GT1.png",
               "hover": "The Master of the Demons",
               "pdf": "pdf/GothI.pdf",
               "share": false,
@@ -244,6 +245,7 @@
             {
               "id": "ap",
               "label": "Part II",
+              "icon": "images/GT2.png",
               "hover": "The Arian Princess",
               "pdf": "pdf/GothII.pdf",
               "share": false,
@@ -252,6 +254,7 @@
             {
               "id": "hc",
               "label": "Part III",
+              "icon": "images/GT3.png",
               "hover": "The Hunnic Curse",
               "pdf": "pdf/GothIII.pdf",
               "share": false,
@@ -260,6 +263,7 @@
             {
               "id": "qp",
               "label": "Part IV",
+              "icon": "images/GT4.png",
               "hover": "The Queen's Potion",
               "pdf": "pdf/GothIV.pdf",
               "share": false,
@@ -268,6 +272,7 @@
             {
               "id": "cr",
               "label": "Part V",
+              "icon": "images/GT5.png",
               "hover": "The Castle of Remembrance",
               "pdf": "pdf/GothV.pdf",
               "share": false,
