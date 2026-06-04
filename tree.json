@@ -97,7 +97,7 @@
       "id": "elb",
       "label": "ELB",
       "hover": "Ex Libris Boranis",
-      "icon": "images/ELB.png",
+      "icon": "images/ELB.webp",
       "children": [
         {
           "id": "vt",
