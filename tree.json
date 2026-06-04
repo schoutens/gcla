@@ -226,6 +226,7 @@
             {
               "id": "pro",
               "label": "PRO",
+              "icon": "images/GT0.png",
               "hover": "Prologue",
               "text": "The letter aunt Peristera sent me with her fabulous tale.",
               "pdf": "pdf/Goth0.pdf",
