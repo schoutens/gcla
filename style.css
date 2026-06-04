@@ -611,17 +611,10 @@ body {
   transform: translateX(0) scale(1);
 }
 
-.big-button.pdf-available::after {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  border-radius: inherit;
-  border: 2px solid rgba(255,215,100,.7);
-  pointer-events: none;
-}
 
 
-/* .big-button.pdf-available {
+
+.big-button.pdf-available {
   box-shadow:
     0 0 12px rgba(255, 240, 180, 0.8),
     0 0 28px rgba(255, 220, 120, 0.7),
@@ -641,4 +634,4 @@ body {
       0 0 40px rgba(255,220,120,.8),
       0 0 70px rgba(255,180,60,.5);
   }
-} */
+}
