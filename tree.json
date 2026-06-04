@@ -7,13 +7,13 @@
     {
       "id": "h2r",
       "label": "H2R",
-      "icon": "images/H2R.png",
+      "icon": "images/H2R.webp",
       "hover": "Hero to Rebel",
       "children":[
         {
               "id": "b",
               "label": "B",
-              "icon": "images/H2RB.png",
+              "icon": "images/H2RB.webp",
               "hover": "The Cycle of Wahram Chobin",
               "children":[
                           {
@@ -38,7 +38,7 @@
         {
               "id": "v",
               "label": "V",
-              "icon": "images/H2RV.png",
+              "icon": "images/H2RV.webp",
               "hover": "The Cycle of Wistahm Spahbedan",
               "children":[
                           {
@@ -61,13 +61,13 @@
         {
               "id": "s",
               "label": "S",
-              "icon": "images/H2RS.png",
+              "icon": "images/H2RS.webp",
               "hover": "The Cycle of Pirag Shahrwaraz"
         },
         {
               "id": "f",
               "label": "F",
-              "icon": "images/H2RF.png",
+              "icon": "images/H2RF.webp",
               "hover": "The Cycle of Farrokhzad Bav"
         }
       ]
@@ -75,20 +75,20 @@
     {
       "id": "o2p",
       "label": "O2P",
-      "icon": "images/O2P.png",
+      "icon": "images/O2P.webp",
       "hover": "Orphan to Princess",
       "children":[
         {
               "id": "r2p",
               "label": "R2P",
-              "icon": "images/O2P1.png",
+              "icon": "images/O2P1.webp",
               "hover": "All Roads Lead to Persia",
               "pdf": "pdf/O2P1.pdf"
         },
         {
               "id": "qg",
               "label": "QG",
-               "icon": "images/O2P2.png",
+               "icon": "images/O2P2.webp",
               "hover": "The Queens' Gambit"
         }
       ]
@@ -102,13 +102,13 @@
         {
           "id": "vt",
           "label": "VT",
-           "icon": "images/VT.png",
+           "icon": "images/VT.webp",
           "hover": "The Storybook of Varaztirots the Armenian",
           "children": [
             {
               "id": "int",
               "label": "INTRO",
-              "icon": "images/VTintro.png",
+              "icon": "images/VTintro.webp",
               "hover": "Introduction",
               "pdf": "pdf/VTIntro.pdf",
               "share": true
@@ -117,7 +117,7 @@
               "id": "3ps",
               "label": "3PS",
               "hover": "The Three Princes of Serendipity",
-              "icon": "images/VT3ps.png",
+              "icon": "images/VT3ps.webp",
               "pdf": "pdf/3PS.pdf",
               "share": true,
               "patreon": "https://www.patreon.com/posts/156882762",
@@ -130,7 +130,7 @@
               "label": "TA",
               "hover": "The Tower of Arrogance",
            
-              "icon": "images/VTta.png",
+              "icon": "images/VTta.webp",
               "text": "Coming soon to a computer near you",
               "pdf": "pdf/TA.pdf",
               "share": true,
@@ -144,7 +144,7 @@
               "label": "LED",
               "hover": "The Lair of the Evil Dragon",
               "text": "Coming soon to a computer near you",
-              "icon": "images/VTled.png",
+              "icon": "images/VTled.webp",
               "pdf": "pdf/LED.pdf",
               "share": true,
               "pdfEnabled": false,
@@ -157,7 +157,7 @@
               "id": "ww",
               "label": "WW",
               "hover": "The Wailing Whale",
-               "icon": "images/VTww.png",
+               "icon": "images/VTww.webp",
               "text": "Coming soon to a computer near you",
               "pdf": "pdf/WW.pdf",
               "share": true,
@@ -170,13 +170,13 @@
               "id": "sbc",
               "label": "SBC",
               "hover": "The Silver Book of Cantations",
-               "icon": "images/VTsbc.png",
+               "icon": "images/VTsbc.webp",
               "text": "Coming soon to a computer near you"
             },
             {
               "id": "3dh",
               "label": "3DH",
-               "icon": "images/VT3dh.png",
+               "icon": "images/VT3dh.webp",
               "hover": "The Three Devs of Hrom",
               "text": "Coming soon to a computer near you"
             },
@@ -184,34 +184,34 @@
               "id": "hws",
               "label": "HWS",
               "hover": "A Holy Wood Story",
-               "icon": "images/VThws.png",
+               "icon": "images/VThws.webp",
               "text": "Coming soon to a computer near you"
             },
             {
               "id": "fg",
               "label": "FG",
-              "icon": "images/VTfg.png",
+              "icon": "images/VTfg.webp",
               "hover": "The Forgotten God",
               "text": "Coming soon to a computer near you"
             },
             {
               "id": "dsl",
               "label": "DSL",
-               "icon": "images/VTdsl.png",
+               "icon": "images/VTdsl.webp",
               "hover": "The Den of the Square Lion",
               "text": "Coming soon to a computer near you"
             },
             {
               "id": "sgi",
               "label": "SGI",
-               "icon": "images/VTsgi.png",
+               "icon": "images/VTsgi.webp",
               "hover": "The Statue of the God Incarnate",
               "text": "Coming soon to a computer near you"
             },
             {
               "id": "ee",
               "label": "EE",
-               "icon": "images/VTee.png",
+               "icon": "images/VTee.webp",
               "hover": "The Equestrian Ewe and the Shorn Stallion",
               "text": "Coming soon to a computer near you"
             }
@@ -220,13 +220,13 @@
         {
           "id": "gt",
           "label": "GT",
-           "icon": "images/GT.png",
+           "icon": "images/GT.webp",
           "hover": "A Gothic Tale",
           "children":[
             {
               "id": "pro",
               "label": "PRO",
-              "icon": "images/GT0.png",
+              "icon": "images/GT0.webp",
               "hover": "Prologue",
               "text": "The letter aunt Peristera sent me with her fabulous tale.",
               "pdf": "pdf/Goth0.pdf",
@@ -237,7 +237,7 @@
             {
               "id": "md",
               "label": "Part I",
-              "icon": "images/GT1.png",
+              "icon": "images/GT1.webp",
               "hover": "The Master of the Demons",
               "pdf": "pdf/GothI.pdf",
               "share": false,
@@ -246,7 +246,7 @@
             {
               "id": "ap",
               "label": "Part II",
-              "icon": "images/GT2.png",
+              "icon": "images/GT2.webp",
               "hover": "The Arian Princess",
               "pdf": "pdf/GothII.pdf",
               "share": false,
@@ -255,7 +255,7 @@
             {
               "id": "hc",
               "label": "Part III",
-              "icon": "images/GT3.png",
+              "icon": "images/GT3.webp",
               "hover": "The Hunnic Curse",
               "pdf": "pdf/GothIII.pdf",
               "share": false,
@@ -264,7 +264,7 @@
             {
               "id": "qp",
               "label": "Part IV",
-              "icon": "images/GT4.png",
+              "icon": "images/GT4.webp",
               "hover": "The Queen's Potion",
               "pdf": "pdf/GothIV.pdf",
               "share": false,
@@ -273,7 +273,7 @@
             {
               "id": "cr",
               "label": "Part V",
-              "icon": "images/GT5.png",
+              "icon": "images/GT5.webp",
               "hover": "The Castle of Remembrance",
               "pdf": "pdf/GothV.pdf",
               "share": false,
