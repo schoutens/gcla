@@ -615,7 +615,7 @@ body {
 
 
 .big-button.pdf-available {
- animation: pdfGlow 2.4s ease-in-out infinite;
+ animation: pdfGlow 3.2s ease-in-out infinite;
 }
 
 @keyframes pdfGlow {
