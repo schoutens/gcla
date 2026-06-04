@@ -615,10 +615,7 @@ body {
 
 
 .big-button.pdf-available {
-  box-shadow:
-    0 0 12px rgba(255, 240, 180, 0.8),
-    0 0 28px rgba(255, 220, 120, 0.7),
-    0 0 55px rgba(255, 200, 80, 0.5);
+ animation: pdfGlow 2.4s ease-in-out infinite;
 }
 
 @keyframes pdfGlow {
