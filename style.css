@@ -635,36 +635,50 @@ body {
 
 #huh-button {
   display: flex;
-  margin: 2rem auto 0;
+
   width: 120px;
   height: 120px;
   border-radius: 50%;
-    background: red;
-  /* background: radial-gradient(circle at 35% 30%, #ff6b5e, #b40000 55%, #5a0000); */
-  color: white;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #ffb3a8 0%,
+      #c85a4a 35%,
+      #8f2d22 70%,
+      #55130d 100%
+    );
+
+  color: #fff8e8;
   text-decoration: none;
-  font-family: Georgia, serif;
-  font-weight: bold;
-  font-size: 2rem;
 
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  box-shadow:
-    0 8px 0 #4a0000,
-    0 14px 22px rgba(0,0,0,0.45),
-    inset 0 4px 8px rgba(255,255,255,0.35);
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: bold;
 
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 3px solid rgba(255,255,255,0.25);
+
+  box-shadow:
+    0 10px 0 #3f0e09,
+    0 14px 25px rgba(0,0,0,0.45),
+    inset 0 8px 12px rgba(255,255,255,0.35),
+    inset 0 -10px 15px rgba(0,0,0,0.30);
+
+  transition: all 0.15s ease;
 }
 
 #huh-button:hover {
-  transform: translateY(3px);
+  transform: translateY(4px);
+
   box-shadow:
-    0 5px 0 #4a0000,
-    0 10px 16px rgba(0,0,0,0.45),
-    inset 0 4px 8px rgba(255,255,255,0.35);
+    0 6px 0 #3f0e09,
+    0 10px 18px rgba(0,0,0,0.40),
+    inset 0 8px 12px rgba(255,255,255,0.35),
+    inset 0 -10px 15px rgba(0,0,0,0.30);
 }
 
 #huh-button .huh-hover {
