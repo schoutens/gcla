@@ -673,6 +673,9 @@ body {
     inset 3px 3px 8px rgba(255,255,255,0.15),
     inset -4px -4px 10px rgba(0,0,0,0.35);
 }
+
+
+
 #huh-button::before {
   content: "";
 
@@ -717,4 +720,17 @@ body {
 
 #huh-button.show {
   display: flex;
+}
+
+.huh-main {
+  font-size: 4.5rem;
+  font-weight: bold;
+
+  color: rgba(60,10,10,0.7);
+
+  transform: translateY(-2px);
+
+  text-shadow:
+    0 1px 0 rgba(255,220,220,0.25),
+    0 -1px 0 rgba(40,0,0,0.4);
 }
