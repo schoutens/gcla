@@ -527,7 +527,10 @@ fetch("tree.json")
   .then(data => {
     tree = data;
     loadFromHash();
+    // force visibility update AFTER page is rendered
+    updateHuhButtonVisibility();
   })
+  
   .catch(err => {
     console.error("Tree failed to load", err);
     app.textContent = "Site structure failed to load.";
