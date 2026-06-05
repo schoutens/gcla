@@ -672,7 +672,7 @@ body {
     inset -4px -4px 10px rgba(0,0,0,0.35);
 }
 
-#huh-button::before {
+/* #huh-button::before {
   content: "";
 
   position: absolute;
@@ -684,7 +684,7 @@ body {
   border: 3px solid rgba(90,0,0,0.4);
 
   pointer-events: none;
-}
+} */
 
 #huh-button:hover {
   transform: translateY(4px);
