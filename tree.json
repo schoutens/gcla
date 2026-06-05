@@ -287,6 +287,7 @@
     {
       "id": "fut",
       "label": "FUT",
+       "icon": "images/FUT.webp",
       "hover": "Future Projects",
       "children":[
         {
