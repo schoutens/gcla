@@ -634,13 +634,13 @@ body {
 }
 
 #huh-button {
-  display: none;
+  display: flex;
   margin: 2rem auto 0;
   width: 120px;
   height: 120px;
   border-radius: 50%;
-
-  background: radial-gradient(circle at 35% 30%, #ff6b5e, #b40000 55%, #5a0000);
+    background: red;
+  /* background: radial-gradient(circle at 35% 30%, #ff6b5e, #b40000 55%, #5a0000); */
   color: white;
   text-decoration: none;
   font-family: Georgia, serif;
