@@ -489,6 +489,20 @@ function loadFromHash() {
   }
 }
 
+function updateHuhButtonVisibility() {
+  const huh = document.getElementById("huh-button");
+  if (!huh) return;
+
+  const isOpeningPage =
+    window.location.hash === "" ||
+    window.location.hash === "#";
+
+  huh.classList.toggle("show", isOpeningPage);
+}
+
+updateHuhButtonVisibility();
+window.addEventListener("hashchange", updateHuhButtonVisibility);
+
 backButton.addEventListener("click", () => {
   if (historyStack.length === 0) {
     renderHome();
@@ -516,5 +530,7 @@ fetch("tree.json")
     console.error("Tree failed to load", err);
     app.textContent = "Site structure failed to load.";
   });
+
+  updateHuhButtonVisibility();
 
   
