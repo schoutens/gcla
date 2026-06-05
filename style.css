@@ -634,12 +634,9 @@ body {
 }
 
 #huh-button {
-  display: flex;
-
+  display: none;
 
   position: relative;
-  overflow: hidden;
-
 
   width: 130px;
   height: 130px;

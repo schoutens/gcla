@@ -500,8 +500,7 @@ function updateHuhButtonVisibility() {
   huh.classList.toggle("show", isOpeningPage);
 }
 
-updateHuhButtonVisibility();
-window.addEventListener("hashchange", updateHuhButtonVisibility);
+
 
 backButton.addEventListener("click", () => {
   if (historyStack.length === 0) {
@@ -518,7 +517,10 @@ backButton.addEventListener("click", () => {
   }
 });
 
-window.addEventListener("hashchange", loadFromHash);
+window.addEventListener("hashchange", () => {
+  loadFromHash();
+  updateHuhButtonVisibility();
+});
 
 fetch("tree.json")
   .then(res => res.json())
@@ -531,6 +533,5 @@ fetch("tree.json")
     app.textContent = "Site structure failed to load.";
   });
 
-  updateHuhButtonVisibility();
 
   
