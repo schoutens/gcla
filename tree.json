@@ -293,24 +293,28 @@
         {
               "id": "sd",
               "label": "SD",
+               "icon": "images/SD.webp",
               "hover": "A Ship in the Desert",
               "text": "The story of a Mihran nobleman in search of the True God."
         },
         {
               "id": "nk",
               "label": "NK",
-              "hover": "The Man who didn't want to be King",
+               "icon": "images/NK.webp",
+              "hover": "The Prince who didn't want to be King",
               "text": "The story of a Sasanian Prince used as a pawn in an international gambit."
         },
         {
               "id": "p2o",
               "label": "P2O",
+               "icon": "images/P2O.webp",
               "hover": "From Princess to Orphan",
               "text": "The story of a Lombard Princess becoming twice an orphan."
         },
         {
               "id": "cd",
               "label": "CD",
+               "icon": "images/CD.webp",
               "hover": "The Call of Destiny",
               "text": "The story of a Frankish girl becoming the confidante of Queens."
         }
