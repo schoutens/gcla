@@ -111,7 +111,8 @@
               "icon": "images/VTintro.webp",
               "hover": "Introduction",
               "pdf": "pdf/VTIntro.pdf",
-              "share": true
+              "share": true,
+              "isNew": true
             },
             {
               "id": "3ps",
