@@ -215,6 +215,13 @@
                "icon": "images/VTee.webp",
               "hover": "The Equestrian Ewe and the Shorn Stallion",
               "text": "Coming soon to a computer near you"
+            },
+            {
+              "id": "eh",
+              "label": "EH",
+               "icon": "images/VTeh.webp",
+              "hover": "The Elven Hour",
+              "text": "Coming soon to a computer near you"
             }
           ]
         },
