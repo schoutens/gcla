@@ -591,8 +591,8 @@ body {
 
 .big-button .sigil-pop {
   position: absolute;
-  width: 180px;
-  height: 180px;
+  width: 350px;
+  height: 350px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
