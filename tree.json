@@ -122,7 +122,7 @@
               "pdf": "pdf/3PS.pdf",
               "share": true,
               "patreon": "https://www.patreon.com/posts/156882762",
-              "patreonText": "Check out the chronicler's notes",
+              "patreonText": "Check out the chronicler's notes on his patreon page",
               "patreonEnabled": true,
               "isNew": true
             },
@@ -136,7 +136,7 @@
               "pdf": "pdf/TA.pdf",
               "share": true,
               "pdfEnabled": true,
-              "patreonText": "Check out the chronicler's notes",
+              "patreonText": "Check out the chronicler's notes on his patreon page",
               "patreonEnabled": true,
               "patreon": "https://www.patreon.com/posts/158344787"
             },
@@ -147,11 +147,11 @@
               "text": "Coming soon to a computer near you",
               "icon": "images/VTled.webp",
               "pdf": "pdf/LED.pdf",
+              "patreonText": "Check out the chronicler's notes on his patreon page",
+              "patreon": "https://www.patreon.com/posts/158513519",
+              "patreonEnabled": false,
               "share": true,
               "pdfEnabled": false,
-              "patreonText": "Check out the chronicler's notes",
-              "patreonEnabled": true,
-              "patreon": "https://www.patreon.com/posts/158513519",
               "isNew": false
             },
             {
@@ -163,7 +163,7 @@
               "pdf": "pdf/WW.pdf",
               "share": true,
               "pdfEnabled": true,
-              "patreonText": "Check out the chronicler's notes",
+              "patreonText": "Check out the chronicler's notes on his patreon page",
               "patreonEnabled": true,
               "patreon": "https://www.patreon.com/posts/158435718"
             },
@@ -171,35 +171,56 @@
               "id": "sbc",
               "label": "SBC",
               "hover": "The Silver Book of Cantations",
-               "icon": "images/VTsbc.webp",
-              "text": "Coming soon to a computer near you"
+              "icon": "images/VTsbc.webp",
+              "text": "Coming soon to a computer near you",
+              "patreonText": "Check out the chronicler's notes on his patreon page",
+              "patreonEnabled": false,
+              "share": false,
+              "pdfEnabled": false,
+              "isNew": false
             },
             {
               "id": "3dh",
               "label": "3DH",
                "icon": "images/VT3dh.webp",
               "hover": "The Three Devs of Hrom",
-              "text": "Coming soon to a computer near you"
+               "patreonText": "Check out the chronicler's notes on his patreon page",
+              "text": "Coming soon to a computer near you",
+              "patreonEnabled": false,
+              "share": false,
+              "pdfEnabled": false,
+              "isNew": false
             },
             {
               "id": "hws",
               "label": "HWS",
               "hover": "A Holy Wood Story",
                "icon": "images/VThws.webp",
-              "text": "Coming soon to a computer near you"
+                "patreonText": "Check out the chronicler's notes on his patreon page",
+              "text": "Coming soon to a computer near you",
+              "patreonEnabled": false,
+              "share": false,
+              "pdfEnabled": false,
+              "isNew": false
             },
             {
               "id": "fg",
               "label": "FG",
               "icon": "images/VTfg.webp",
               "hover": "The Forgotten God",
-              "text": "Coming soon to a computer near you"
+               "patreonText": "Check out the chronicler's notes on his patreon page",
+              "text": "Coming soon to a computer near you",
+              "patreonEnabled": false,
+              "share": false,
+              "pdfEnabled": false,
+              "isNew": false
             },
             {
               "id": "dsl",
               "label": "DSL",
                "icon": "images/VTdsl.webp",
               "hover": "The Den of the Square Lion",
+               "patreonText": "Check out the chronicler's notes on his patreon page",
               "text": "Coming soon to a computer near you"
             },
             {
@@ -207,21 +228,36 @@
               "label": "SGI",
                "icon": "images/VTsgi.webp",
               "hover": "The Statue of the God Incarnate",
-              "text": "Coming soon to a computer near you"
+               "patreonText": "Check out the chronicler's notes on his patreon page",
+              "text": "Coming soon to a computer near you",
+              "patreonEnabled": false,
+              "share": false,
+              "pdfEnabled": false,
+              "isNew": false
             },
             {
               "id": "ee",
               "label": "EE",
                "icon": "images/VTee.webp",
               "hover": "The Equestrian Ewe and the Shorn Stallion",
-              "text": "Coming soon to a computer near you"
+               "patreonText": "Check out the chronicler's notes on his patreon page",
+              "text": "Coming soon to a computer near you",
+              "patreonEnabled": false,
+              "share": false,
+              "pdfEnabled": false,
+              "isNew": false
             },
             {
               "id": "eh",
               "label": "EH",
                "icon": "images/VTeh.webp",
               "hover": "The Elven Hour",
-              "text": "Coming soon to a computer near you"
+               "patreonText": "Check out the chronicler's notes on his patreon page",
+              "text": "Coming soon to a computer near you",
+              "patreonEnabled": false,
+              "share": false,
+              "pdfEnabled": false,
+              "isNew": false
             }
           ]
         },
