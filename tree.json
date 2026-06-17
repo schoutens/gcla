@@ -285,7 +285,7 @@
               "hover": "The Master of the Demons",
               "pdf": "pdf/GothI.pdf",
               "share": false,
-              "pdfEnabled": true
+              "pdfEnabled": false
             },
             {
               "id": "ap",
@@ -294,7 +294,7 @@
               "hover": "The Arian Princess",
               "pdf": "pdf/GothII.pdf",
               "share": false,
-              "pdfEnabled": true
+              "pdfEnabled": false
             },
             {
               "id": "hc",
@@ -303,7 +303,7 @@
               "hover": "The Hunnic Curse",
               "pdf": "pdf/GothIII.pdf",
               "share": false,
-              "pdfEnabled": true
+              "pdfEnabled": false
             },
             {
               "id": "qp",
@@ -312,7 +312,7 @@
               "hover": "The Queen's Potion",
               "pdf": "pdf/GothIV.pdf",
               "share": false,
-              "pdfEnabled": true
+              "pdfEnabled": false
             },
             {
               "id": "cr",
@@ -321,7 +321,7 @@
               "hover": "The Castle of Remembrance",
               "pdf": "pdf/GothV.pdf",
               "share": false,
-              "pdfEnabled": true
+              "pdfEnabled": false
             }
 
           ]
