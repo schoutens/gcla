@@ -243,12 +243,12 @@
                "icon": "images/VTsgi.webp",
               "hover": "The Statue of the God Incarnate",
                "patreonText": "Check out the chronicler's notes on his patreon page",
-               "patreon": "https://www.patreon.com/posts/",
-              "pdf": "pdf/.pdf", 
+               "patreon": "https://www.patreon.com/posts/161801341",
+              "pdf": "pdf/SGI.pdf", 
               "text": "Coming soon to a computer near you",
               "patreonEnabled": false,
               "share": false,
-              "pdfEnabled": false,
+              "pdfEnabled": true,
               "isNew": false
             },
             {
