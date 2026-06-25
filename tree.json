@@ -258,7 +258,7 @@
               "hover": "The Equestrian Ewe and the Shorn Stallion",
                "patreonText": "Check out the chronicler's notes on his patreon page",
                "patreon": "https://www.patreon.com/posts/161885633",
-              "pdf": "pdf/.pdf", 
+              "pdf": "pdf/EE.pdf", 
               "text": "Coming soon to a computer near you",
               "patreonEnabled": false,
               "share": false,
@@ -271,12 +271,12 @@
                "icon": "images/VTeh.webp",
               "hover": "The Elven Hour",
                "patreonText": "Check out the chronicler's notes on his patreon page",
-               "patreon": "https://www.patreon.com/posts/",
-              "pdf": "pdf/.pdf", 
+               "patreon": "https://www.patreon.com/posts/161994546",
+              "pdf": "pdf/EH.pdf", 
               "text": "Coming soon to a computer near you",
               "patreonEnabled": false,
               "share": false,
-              "pdfEnabled": false,
+              "pdfEnabled": true,
               "isNew": false
             }
           ]
