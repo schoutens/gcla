@@ -345,6 +345,15 @@
             }
 
           ]
+        },
+        {
+         "id": "ode",
+          "label": "ODE",
+           "icon": "images/ODE.webp",
+          "hover": "Ode to my father",
+          "pdf": "pdf/Ode.pdf",
+          "share": false,
+          "pdfEnabled": false 
         }
       ]
     },
