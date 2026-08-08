@@ -111,6 +111,8 @@
               "icon": "images/VTintro.webp",
               "hover": "Introduction",
               "pdf": "pdf/VTIntro.pdf",
+               "patreon": "https://schoutens.github.io/gcla/#elb/vt/3ps",
+              "patreonText": "You can read Varaz's first story here",
               "share": true,
               "isNew": true
             },
